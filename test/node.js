@@ -149,18 +149,20 @@ describe( "Node", function(){
 
 
   describe( "setMatrix", function(){
-
-    beforeEach(function(){
-      node = new Node();
-
-      var mat = [
+    var testMat = [
         .2, 0,  0, 0,
         0, 0, -.3, 0,
         0, .4,  0, 0,
         2, 4,  8, 1
       ];
 
-      node.setMatrix( mat );
+
+    beforeEach(function(){
+      node = new Node();
+      node.updateWorldMatrix();
+
+
+      node.setMatrix( testMat );
     })
 
 
@@ -186,12 +188,12 @@ describe( "Node", function(){
     it( "should update to original matrix", function(){
       node.invalidate()
       node.updateMatrix()
-      equalish( node._matrix, [
-        .2, 0,  0, 0,
-        0, 0, -.3, 0,
-        0, .4,  0, 0,
-        2, 4,  8, 1
-      ]);
+      equalish( node._matrix, testMat);
+    });
+
+    it( "should invalidate world matrix", function(){
+      node.updateWorldMatrix()
+      equalish( node._wmatrix, testMat);
     });
 
   });
@@ -238,6 +240,34 @@ describe( "Node", function(){
       expect( parent._children.length ).to.be( 0 )
     });
 
+    describe( "and reparenting", function(){
+
+      var newParent;
+
+      beforeEach(function(){
+        node.updateWorldMatrix()
+        newParent = new Node();
+        newParent.add( node )
+        newParent.x = 10;
+      })
+
+
+      it( "should remove child from old parent", function(){
+        expect( parent._children.length ).to.be( 0 )
+      });
+
+      it( "should add child to new parent", function(){
+        expect( newParent._children.length ).to.be( 1 )
+        expect( newParent._children[0] ).to.be( node )
+      });
+
+      it( "should invalidate world matrix", function(){
+        node.updateWorldMatrix()
+        expect( node._wmatrix[12] ).to.be( 10 )
+      });
+
+    });
+
 
 
   });
@@ -248,6 +278,13 @@ describe( "Node", function(){
 
 
   describe( "world matrix", function(){
+
+    var testMat = [
+      1, 0, 0, 0,
+      0, 1, 0, 0,
+      0, 0, 1, 0,
+      2, 5, 0, 1
+    ]
 
     beforeEach(function(){
       node = new Node();
@@ -268,12 +305,7 @@ describe( "Node", function(){
     it( "update root should update descendants", function(){
       root.updateWorldMatrix()
 
-      equalish( node._wmatrix, [
-          1, 0, 0, 0,
-          0, 1, 0, 0,
-          0, 0, 1, 0,
-          2, 5, 0, 1
-      ]);
+      equalish( node._wmatrix, testMat);
     });
 
 
@@ -291,12 +323,7 @@ describe( "Node", function(){
     it( "update children should update children", function(){
       node.updateWorldMatrix()
 
-      equalish( node._wmatrix, [
-          1, 0, 0, 0,
-          0, 1, 0, 0,
-          0, 0, 1, 0,
-          2, 5, 0, 1
-      ]);
+      equalish( node._wmatrix, testMat);
 
     });
 

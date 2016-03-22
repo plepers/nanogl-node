@@ -38,9 +38,9 @@ function Node(){
 Node.prototype = {
 
 
-  rotateX : function(a){ quat.rotateX( this.rotation, this.rotation, a ); this.invalidate(); },
-  rotateY : function(a){ quat.rotateY( this.rotation, this.rotation, a ); this.invalidate(); },
-  rotateZ : function(a){ quat.rotateZ( this.rotation, this.rotation, a ); this.invalidate(); },
+  rotateX : function(rad){ quat.rotateX( this.rotation, this.rotation, rad ); this.invalidate(); },
+  rotateY : function(rad){ quat.rotateY( this.rotation, this.rotation, rad ); this.invalidate(); },
+  rotateZ : function(rad){ quat.rotateZ( this.rotation, this.rotation, rad ); this.invalidate(); },
 
 
   set x(v){ this.position[0] = v; this.invalidate(); },
@@ -53,8 +53,8 @@ Node.prototype = {
 
 
   setScale : function( s ){
-    this.scale[0] = s;
-    this.scale[1] = s;
+    this.scale[0] =
+    this.scale[1] =
     this.scale[2] = s;
     this.invalidate();
   },
@@ -75,11 +75,15 @@ Node.prototype = {
     mat4.copy( this._matrix, m4 );
     math.decomposeMat4( m4, this.position, this.rotation, this.scale );
     this._invalidM = false;
+    this._invalidW = true;
   },
 
 
   add : function( child ){
     if( this._children.indexOf( child ) === -1 ){
+      if( child._parent !== null ){
+        child._parent.remove( child );
+      }
       this._children.push( child );
       child._parent = this;
     }
