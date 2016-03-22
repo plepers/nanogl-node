@@ -108,6 +108,46 @@ describe( "Node", function(){
 
 
 
+  describe( "position setters", function(){
+
+    beforeEach(function(){
+      node = new Node();
+
+      node.x = 1;
+      node.y = 2;
+      node.z = 3;
+    })
+
+
+    it( "should set x", function(){
+      expect( node.position[0] ).to.be( 1 );
+    });
+    it( "should set y", function(){
+      expect( node.position[1] ).to.be( 2 );
+    });
+    it( "should set z", function(){
+      expect( node.position[2] ).to.be( 3 );
+    });
+    it( "should get x", function(){
+      expect( node.x ).to.be( 1 );
+    });
+    it( "should get y", function(){
+      expect( node.y ).to.be( 2 );
+    });
+    it( "should get z", function(){
+      expect( node.z ).to.be( 3 );
+    });
+
+
+    it( "should invalidate", function(){
+      node.updateMatrix()
+      expect( node._matrix[14] ).to.be( 3 );
+    });
+
+  });
+
+
+
   describe( "setMatrix", function(){
 
     beforeEach(function(){

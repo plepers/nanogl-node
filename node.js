@@ -1,5 +1,5 @@
 var glmatrix = require( 'gl-matrix' );
-var math = require( './math' );
+var math     = require( './math' );
 
 
 var mat4 = glmatrix.mat4,
@@ -41,6 +41,15 @@ Node.prototype = {
   rotateX : function(a){ quat.rotateX( this.rotation, this.rotation, a ); this.invalidate(); },
   rotateY : function(a){ quat.rotateY( this.rotation, this.rotation, a ); this.invalidate(); },
   rotateZ : function(a){ quat.rotateZ( this.rotation, this.rotation, a ); this.invalidate(); },
+
+
+  set x(v){ this.position[0] = v; this.invalidate(); },
+  set y(v){ this.position[1] = v; this.invalidate(); },
+  set z(v){ this.position[2] = v; this.invalidate(); },
+
+  get x(){ return this.position[0]; },
+  get y(){ return this.position[1]; },
+  get z(){ return this.position[2]; },
 
 
   setScale : function( s ){
