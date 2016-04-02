@@ -1,17 +1,16 @@
-var glmatrix = require( 'gl-matrix' );
 var math     = require( './math' );
 
-
-var mat4 = glmatrix.mat4,
-    mat3 = glmatrix.mat3,
-    vec3 = glmatrix.vec3,
-    quat = glmatrix.quat;
+var mat4 = require( 'gl-matrix/src/gl-matrix/mat4' ),
+    mat3 = require( 'gl-matrix/src/gl-matrix/mat3' ),
+    vec3 = require( 'gl-matrix/src/gl-matrix/vec3' ),
+    quat = require( 'gl-matrix/src/gl-matrix/quat' );
 
 
 var MAT3 = mat3.create(),
     VX   = new Float32Array( MAT3.buffer, 0*4, 3 ),
     VY   = new Float32Array( MAT3.buffer, 3*4, 3 ),
     VZ   = new Float32Array( MAT3.buffer, 6*4, 3 );
+    VUP  = vec3.fromValues( 0, 1, 0 );
 
 
 

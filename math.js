@@ -1,8 +1,8 @@
-var glmatrix = require( 'gl-matrix' );
 
+var mat3 = require( 'gl-matrix/src/gl-matrix/mat3' ),
+    quat = require( 'gl-matrix/src/gl-matrix/quat' );
 
-var quat = glmatrix.quat;
-var M3   = glmatrix.mat3.create();
+var M3   = mat3.create();
 
 
 function decomposeMat4( m4, p, q, s ){
