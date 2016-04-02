@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/plepers/nanogl-node#readme",
   "dependencies": {
-    "gl-matrix": "^2.3.1"
+    "gl-matrix": "2.3.1"
   },
   "devDependencies": {
     "expect.js": "^0.3.1",
