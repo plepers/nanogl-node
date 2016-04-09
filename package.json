@@ -1,6 +1,6 @@
 {
   "name": "nanogl-node",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "handle objects transform in 3D space",
   "main": "node.js",
   "scripts": {
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/plepers/nanogl-node#readme",
   "dependencies": {
-    "gl-matrix": "^2.3.1"
+    "gl-matrix": "2.3.1"
   },
   "devDependencies": {
     "expect.js": "^0.3.1",
