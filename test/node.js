@@ -327,6 +327,24 @@ describe( "Node", function(){
 
     });
 
+
+    it( "invalidate middle should update children", function(){
+      root.updateWorldMatrix()
+
+      parent.position[0] = 3
+      parent.invalidate()
+
+      root.updateWorldMatrix()
+
+      equalish( node._wmatrix, [
+          1, 0, 0, 0,
+          0, 1, 0, 0,
+          0, 0, 1, 0,
+          4, 5, 0, 1
+      ]);
+
+    });
+
     it( "invalidate root should update children", function(){
       node.updateWorldMatrix()
 
@@ -388,23 +406,26 @@ describe( "Node", function(){
       var tinvalid = sinon.spy( Node.prototype, "_hasInvalidWorldMatrix" );
 
       node.updateWorldMatrix()
-      expect( compute.callCount ).to.be( 1 )
 
       compute.restore();
       tinvalid.restore();
+
+      expect( compute.callCount ).to.be( 0 )
+      expect( tinvalid.callCount ).to.be( 3 )
+
     });
 
 
 
-    it( "update valid children should not recompute parents", function(){
+    it( "update valid root should not recompute parents", function(){
       root.updateWorldMatrix()
 
       var compute = sinon.spy( glmat.mat4, "multiply" );
 
       root.updateWorldMatrix()
+      compute.restore()
       expect( compute.callCount ).to.be( 0 )
 
-      compute.restore()
     });
 
 
@@ -413,10 +434,10 @@ describe( "Node", function(){
 
       var tinvalid = sinon.spy( Node.prototype, "_hasInvalidWorldMatrix" );
       root.updateWorldMatrix()
+      tinvalid.restore();
 
       // console.log( tinvalid.callCount );
       expect( tinvalid.callCount ).to.be( 3 )
-      tinvalid.restore();
 
 
     });
