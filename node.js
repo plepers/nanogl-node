@@ -118,16 +118,24 @@ Node.prototype = {
     }
   },
 
+
   /**
    * update world matrix and descendants.
    */
   updateWorldMatrix : function( skipParents ){
     skipParents = !!skipParents;
 
-    this._computeWorldMatrix( skipParents );
+
+    this.updateMatrix();
+    var invalidWorldMatrix = this._hasInvalidWorldMatrix( skipParents );
+    if( invalidWorldMatrix ) {
+      this._computeWorldMatrix( skipParents );
+    }
 
     for (var i = 0; i < this._children.length; i++) {
-      this._children[i].updateWorldMatrix( true );
+      var c = this._children[i];
+      c._invalidW = c._invalidW || invalidWorldMatrix;
+      c.updateWorldMatrix( true );
     }
 
   },
@@ -135,24 +143,22 @@ Node.prototype = {
 
   _computeWorldMatrix : function( skipParents ){
 
-    this.updateMatrix();
+    var p = this._parent;
 
-    if( this._hasInvalidWorldMatrix( skipParents ) ) {
-
-      if( this._parent !== null ){
-        if( ! skipParents ) {
-          this._parent._computeWorldMatrix( false );
-        }
-        mat4.multiply( this._wmatrix, this._parent._wmatrix, this._matrix );
-      } else {
-        mat4.copy( this._wmatrix, this._matrix );
+    if( p !== null ){
+      if( ! skipParents && p._hasInvalidWorldMatrix( false ) ) {
+        p.updateMatrix();
+        p._computeWorldMatrix( false );
       }
-
+      mat4.multiply( this._wmatrix, p._wmatrix, this._matrix );
+    } else {
+      mat4.copy( this._wmatrix, this._matrix );
     }
 
     this._invalidW = false;
 
   },
+
 
 
   _hasInvalidWorldMatrix : function( skipParents ){
