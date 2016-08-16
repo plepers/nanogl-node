@@ -9,7 +9,7 @@ var mat4 = require( 'gl-matrix/src/gl-matrix/mat4' ),
 var MAT3 = mat3.create(),
     VX   = new Float32Array( MAT3.buffer, 0*4, 3 ),
     VY   = new Float32Array( MAT3.buffer, 3*4, 3 ),
-    VZ   = new Float32Array( MAT3.buffer, 6*4, 3 );
+    VZ   = new Float32Array( MAT3.buffer, 6*4, 3 ),
     VUP  = vec3.fromValues( 0, 1, 0 );
 
 
