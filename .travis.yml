@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- '0.12'
+- '9.5.0'
 env:
   global:
   - secure: qrCKNIg1ysSItajWClKkUX1Y0593OfOaYAah2Ntx4+Rpk1sPRBW55mQwm9JimYF8kGeoiinQRXjk9xaQyGtKQPv4QrICQTDvIUNdMrsg9BF86PHOkUNOeQ/7jDA7w+oddnuCOieWlUTyDA3zNLt2ggPIKG53zULc0a86k/YgIhiNcH2+uZ0s9pN5kJtB0iJzSDdovATsdubgcNlJvHCAhxNY/cpNrHAhiM/Jphb5nkBs3FqK0WLg1dU7zTaK23hwzvGulCR2kYATsqYxXnpGv2br35xRXl8kDttY4zcRNktk4iM1s1pn/pLLho6xgEgVSnfD2vO88JM1nefG2A8RygT26OUO9mkwUSlViQ14V1hvKw1c/IKw3O7416E8oTjpwkDfI0tkuNXyODz0v476RORx6BE59y9hhHuM6H1Uy1eGmnI83nYLvpoJq+Qj0OlPAJ0erQIXy+pq/BErnGwznWnynwnM0tfehW4fvyRxLd7eVweNkOnH9avECWWwrkcu+zftMVlwNx3D/Q+Tq0pXWCgsCKp6iBDt/BCxFiJiqaKrRAFLjCegFCShM3+YFDPYMmel3zlJRl91BDazjEmN+wphVN35XLQZg36e51hiomLOoD1t+NPS0GJ1zXVxzszgJj7ntUxju6LIFk+lTFSK5oXj79D3sGihbmxuRHyASq0=
@@ -13,10 +13,18 @@ cache:
   directories:
   - node_modules
 deploy:
-  provider: npm
-  email: contact@makemepulse.com
-  api_key:
-    secure: LiX3PFBjOuBODyMyFavy4mqRfb0NHq83PAYLllk3+hagBuP0m9R76yWoeDKKUVRQuPXnh23ryzouIN4irl1GjxI09ia9Sa7zo4kDN50UVG6Z5LDi/Wo0FEgTiBmpGgHfxbWCoIrWQEWFpnF5+1iKJftvgkIpVQGByCn8m+XT+yCIad8p3HVr4LahU3+djiU4T4Or1IpacHmzx7CrU2+K7bUH9ZkLs4kf3Cd+IRv6tJBfyBFgFmumTTkbcFjwILDhkVRMbiFwmDw8SVXmE3WM/VUGQxbxtL1DHg+NOd5Z2yl6CcDizWF9+rIqeQKyISnyu8/5yYRR2sNkWYLjUitYFCdVPEsmwocM9D3QJaIG26zdeIyRbriF3iLuQSGEODQrURASxChMirL6mwbdTNwouCGyR4+rpk5EGDwxT++gF64CgjGNkY6sQrt0c++qKnDkST7nV8dm9Zh1y+kvXFY1RnAqiGKxsjKL5BB3nWcRdWEFOvcu+KdSR9nsry0nXKiFFDjaclqa8LyGQ96islEC4UHizxdy1fbupYTbGH92sFBanPb9XlQSZy3Vzqv2fFSfvX5TjZLS9s0RKwTQS0sJYRehNTVE9BjYgkHJgu4uJzS8lh8emzcVmkZIOJbALc8Vi1ZEPQ6thphMjizTicQUCm8pxVoIgwJNPX6jku/4/Dc=
-  on:
-    branch: master
-    repo: plepers/nanogl-node
+  - provider: npm
+    email: pierre.lepers@gmail.com
+    api_key:
+      secure: cgc3s3FiosSowpjuHbFv98/vYPO1egi2mJpRkZtGmkubNUHBYuTej8CpGqDVE89Wk3VPVrG4ZBrOz//X9VhVGMT39WYc7c5a39cEAqkJZ2e+ChdIHbAyH2LTNhtgPQQXRc22NZ0QIzboboS3WEJzUBLtvaLWEVn0jENEFQvsrZi0kXe8pfaUGpKxzpuQUNXWzdHyk9n2sMRV9bu9P1KfcywD4ehFdiCMdbRWlHOPghik/e33WJ1VUdTwCuivrFd9dD1hzWFxLcZ3aihECsowHVFm5i2cT/70Sxiruhlh/BbDaKfNeqwzCrdQJWInZRIldzutxuHbhN6d1Y55Pd5008lFHQ1pxpd9tFE5HPWnq7pjJUY8r1sLLW2/o7XrauUILsX+3wHeZ85Be8QiByunG/LRO7jOsP0N6AL/RKVCCt78ClxHnlRLDfNZgpd1wXZoom4gu3pB2rGVgfnQs7IBvn6Y/y+X9xeLUTYX2t328KGDgQ8aCfZ6MLCoBoyiGvRwCYW934OmaNbtD3bDE7GVERpK4bOcxkL3yhzT7TlNUnso2KNs9W1sYXbaAyEuCX5sbki8vRrBq3ODu3F1vGTSLLRe5MhJd5fG151Q7vNjAE7Ve3fDwXcp9mORQ5k2umspDLEGa9uGppaHtsG5boOdg9J7Sf0EKepYJLTW0UhrbsE=
+    on:
+      branch: master
+      repo: plepers/nanogl-node
+  - provider: npm
+    email: pierre.lepers@gmail.com
+    dry_run: true
+    api_key:
+      secure: cgc3s3FiosSowpjuHbFv98/vYPO1egi2mJpRkZtGmkubNUHBYuTej8CpGqDVE89Wk3VPVrG4ZBrOz//X9VhVGMT39WYc7c5a39cEAqkJZ2e+ChdIHbAyH2LTNhtgPQQXRc22NZ0QIzboboS3WEJzUBLtvaLWEVn0jENEFQvsrZi0kXe8pfaUGpKxzpuQUNXWzdHyk9n2sMRV9bu9P1KfcywD4ehFdiCMdbRWlHOPghik/e33WJ1VUdTwCuivrFd9dD1hzWFxLcZ3aihECsowHVFm5i2cT/70Sxiruhlh/BbDaKfNeqwzCrdQJWInZRIldzutxuHbhN6d1Y55Pd5008lFHQ1pxpd9tFE5HPWnq7pjJUY8r1sLLW2/o7XrauUILsX+3wHeZ85Be8QiByunG/LRO7jOsP0N6AL/RKVCCt78ClxHnlRLDfNZgpd1wXZoom4gu3pB2rGVgfnQs7IBvn6Y/y+X9xeLUTYX2t328KGDgQ8aCfZ6MLCoBoyiGvRwCYW934OmaNbtD3bDE7GVERpK4bOcxkL3yhzT7TlNUnso2KNs9W1sYXbaAyEuCX5sbki8vRrBq3ODu3F1vGTSLLRe5MhJd5fG151Q7vNjAE7Ve3fDwXcp9mORQ5k2umspDLEGa9uGppaHtsG5boOdg9J7Sf0EKepYJLTW0UhrbsE=
+    on:
+      branch: develop
+      repo: plepers/nanogl-node
