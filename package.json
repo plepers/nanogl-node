@@ -1,6 +1,6 @@
 {
   "name": "nanogl-node",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "handle objects transform in 3D space",
   "main": "index.js",
   "scripts": {
