@@ -22,7 +22,7 @@ var equalish = function(a, b) {
 
 
 
-module.exports =  function( a, b ) {
+export default function( a, b ) {
   //console.log( equal(a,b) );
   var eq = equalish( a, b );
   if( !eq ){
