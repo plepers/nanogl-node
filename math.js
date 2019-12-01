@@ -1,7 +1,6 @@
-"use strict";
-const gl_matrix_1 = require("gl-matrix");
-const M3 = gl_matrix_1.mat3.create();
-function decomposeMat4(m4, p, q, s) {
+import { mat3, quat } from "gl-matrix";
+const M3 = mat3.create();
+export function decomposeMat4(m4, p, q, s) {
     p[0] = m4[12];
     p[1] = m4[13];
     p[2] = m4[14];
@@ -17,8 +16,5 @@ function decomposeMat4(m4, p, q, s) {
     M3[6] = m4[8] / s[2];
     M3[7] = m4[9] / s[2];
     M3[8] = m4[10] / s[2];
-    gl_matrix_1.quat.fromMat3(q, M3);
+    quat.fromMat3(q, M3);
 }
-module.exports = {
-    decomposeMat4: decomposeMat4
-};

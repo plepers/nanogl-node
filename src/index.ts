@@ -1,5 +1,6 @@
-import math = require( './math' );
+
 import { mat3, vec3, quat, mat4 } from 'gl-matrix';
+import { decomposeMat4 } from './math';
 
 
 const MAT3 = mat3.create(),
@@ -83,7 +84,7 @@ class Node {
 
   setMatrix( m4 : mat4 ){
     mat4.copy( this._matrix, m4 );
-    math.decomposeMat4( m4, this.position, this.rotation, this.scale );
+    decomposeMat4( m4, this.position, this.rotation, this.scale );
     this._invalidM = false;
     this._invalidW = true;
   }
@@ -180,4 +181,4 @@ class Node {
 };
 
 
-export = Node;
+export default Node

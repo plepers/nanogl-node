@@ -1,10 +1,9 @@
-var Node     = require( '../node' );
-var equalish = require( './equalish' );
+import Node     from '../index';
+import equalish from './equalish';
+import { quat, vec3, mat4 } from 'gl-matrix';
 
-var glmat = require( 'gl-matrix' );
-
-var expect = require( 'expect.js' ),
-    sinon  = require( 'sinon' );
+import expect from 'expect.js'
+import sinon  from 'sinon'
 
 
 var node, parent, root;
@@ -40,7 +39,7 @@ describe( "Node", function(){
 
     it( "should have correct rotation", function(){
       var rad = Math.PI/2;
-      glmat.quat.rotateX( node.rotation, node.rotation, rad )
+      quat.rotateX( node.rotation, node.rotation, rad )
 
       node.invalidate();
       node.updateMatrix();
@@ -83,7 +82,7 @@ describe( "Node", function(){
       node.position[2] = 12;
 
       var rad = Math.PI/2;
-      glmat.quat.rotateX( node.rotation, node.rotation, rad )
+      quat.rotateX( node.rotation, node.rotation, rad )
 
       node.scale[0] = 2.1;
       node.scale[1] = 2.2;
@@ -167,12 +166,12 @@ describe( "Node", function(){
 
 
     it( "should set rotation", function(){
-      var out = glmat.quat.create()
-      matr = [ .2, 0,  0,
+      var out = quat.create()
+      var matr = [ .2, 0,  0,
                0,  0, -.3,
                0, .4,  0 ];
 
-      equalish(glmat.vec3.transformQuat([], [0,1,0], node.rotation), [0,0,-1] );
+      equalish(vec3.transformQuat([], [0,1,0], node.rotation), [0,0,-1] );
 
       equalish( node.rotation, [-0.707106, 0, 0, 0.707106] );
     });
@@ -420,7 +419,7 @@ describe( "Node", function(){
     it( "update valid root should not recompute parents", function(){
       root.updateWorldMatrix()
 
-      var compute = sinon.spy( glmat.mat4, "multiply" );
+      var compute = sinon.spy( mat4, "multiply" );
 
       root.updateWorldMatrix()
       compute.restore()

@@ -14,12 +14,9 @@ declare class Node {
     rotateX(rad: number): void;
     rotateY(rad: number): void;
     rotateZ(rad: number): void;
-    set x(v: number);
-    set y(v: number);
-    set z(v: number);
-    get x(): number;
-    get y(): number;
-    get z(): number;
+    x: number;
+    y: number;
+    z: number;
     setScale(s: number): void;
     lookAt(tgt: vec3): void;
     setMatrix(m4: mat4): void;
@@ -31,4 +28,4 @@ declare class Node {
     _computeWorldMatrix(skipParents: boolean): void;
     _hasInvalidWorldMatrix(skipParents: boolean): boolean;
 }
-export = Node;
+export default Node;

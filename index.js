@@ -1,23 +1,22 @@
-"use strict";
-const math = require("./math");
-const gl_matrix_1 = require("gl-matrix");
-const MAT3 = gl_matrix_1.mat3.create(), VX = (new Float32Array(MAT3.buffer, 0 * 4, 3)), VY = (new Float32Array(MAT3.buffer, 3 * 4, 3)), VZ = (new Float32Array(MAT3.buffer, 6 * 4, 3)), VUP = gl_matrix_1.vec3.fromValues(0, 1, 0);
+import { mat3, vec3, quat, mat4 } from 'gl-matrix';
+import { decomposeMat4 } from './math';
+const MAT3 = mat3.create(), VX = (new Float32Array(MAT3.buffer, 0 * 4, 3)), VY = (new Float32Array(MAT3.buffer, 3 * 4, 3)), VZ = (new Float32Array(MAT3.buffer, 6 * 4, 3)), VUP = vec3.fromValues(0, 1, 0);
 class Node {
     constructor() {
-        this.position = gl_matrix_1.vec3.create();
-        this.rotation = gl_matrix_1.quat.create();
-        this.scale = gl_matrix_1.vec3.fromValues(1, 1, 1);
-        this._matrix = gl_matrix_1.mat4.create();
-        this._wmatrix = gl_matrix_1.mat4.create();
+        this.position = vec3.create();
+        this.rotation = quat.create();
+        this.scale = vec3.fromValues(1, 1, 1);
+        this._matrix = mat4.create();
+        this._wmatrix = mat4.create();
         this._wposition = new Float32Array(this._wmatrix.buffer, 12 * 4, 3);
         this._parent = null;
         this._children = [];
         this._invalidM = true;
         this._invalidW = true;
     }
-    rotateX(rad) { gl_matrix_1.quat.rotateX(this.rotation, this.rotation, rad); this.invalidate(); }
-    rotateY(rad) { gl_matrix_1.quat.rotateY(this.rotation, this.rotation, rad); this.invalidate(); }
-    rotateZ(rad) { gl_matrix_1.quat.rotateZ(this.rotation, this.rotation, rad); this.invalidate(); }
+    rotateX(rad) { quat.rotateX(this.rotation, this.rotation, rad); this.invalidate(); }
+    rotateY(rad) { quat.rotateY(this.rotation, this.rotation, rad); this.invalidate(); }
+    rotateZ(rad) { quat.rotateZ(this.rotation, this.rotation, rad); this.invalidate(); }
     set x(v) { this.position[0] = v; this.invalidate(); }
     set y(v) { this.position[1] = v; this.invalidate(); }
     set z(v) { this.position[2] = v; this.invalidate(); }
@@ -31,17 +30,17 @@ class Node {
         this.invalidate();
     }
     lookAt(tgt) {
-        gl_matrix_1.vec3.subtract(VZ, this.position, tgt);
-        gl_matrix_1.vec3.normalize(VZ, VZ);
-        gl_matrix_1.vec3.cross(VX, VUP, VZ);
-        gl_matrix_1.vec3.normalize(VX, VX);
-        gl_matrix_1.vec3.cross(VY, VZ, VX);
-        gl_matrix_1.quat.fromMat3(this.rotation, MAT3);
+        vec3.subtract(VZ, this.position, tgt);
+        vec3.normalize(VZ, VZ);
+        vec3.cross(VX, VUP, VZ);
+        vec3.normalize(VX, VX);
+        vec3.cross(VY, VZ, VX);
+        quat.fromMat3(this.rotation, MAT3);
         this.invalidate();
     }
     setMatrix(m4) {
-        gl_matrix_1.mat4.copy(this._matrix, m4);
-        math.decomposeMat4(m4, this.position, this.rotation, this.scale);
+        mat4.copy(this._matrix, m4);
+        decomposeMat4(m4, this.position, this.rotation, this.scale);
         this._invalidM = false;
         this._invalidW = true;
     }
@@ -67,7 +66,7 @@ class Node {
     }
     updateMatrix() {
         if (this._invalidM) {
-            gl_matrix_1.mat4.fromRotationTranslationScale(this._matrix, this.rotation, this.position, this.scale);
+            mat4.fromRotationTranslationScale(this._matrix, this.rotation, this.position, this.scale);
             this._invalidM = false;
         }
     }
@@ -91,10 +90,10 @@ class Node {
                 p.updateMatrix();
                 p._computeWorldMatrix(false);
             }
-            gl_matrix_1.mat4.multiply(this._wmatrix, p._wmatrix, this._matrix);
+            mat4.multiply(this._wmatrix, p._wmatrix, this._matrix);
         }
         else {
-            gl_matrix_1.mat4.copy(this._wmatrix, this._matrix);
+            mat4.copy(this._wmatrix, this._matrix);
         }
         this._invalidW = false;
     }
@@ -103,4 +102,4 @@ class Node {
     }
 }
 ;
-module.exports = Node;
+export default Node;
