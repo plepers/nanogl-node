@@ -70,8 +70,7 @@ class Node {
             this._invalidM = false;
         }
     }
-    updateWorldMatrix(skipParents) {
-        skipParents = !!skipParents;
+    updateWorldMatrix(skipParents = false) {
         this.updateMatrix();
         const invalidWorldMatrix = this._hasInvalidWorldMatrix(skipParents);
         if (invalidWorldMatrix) {
