@@ -12,20 +12,20 @@ const MAT3 = mat3.create(),
 
 class Node {
 
-  position: vec3;
-  rotation: quat;
-  scale   : vec3;
+  readonly position: vec3;
+  readonly rotation: quat;
+  readonly scale   : vec3;
 
-  _matrix : mat4;
-  _wmatrix: mat4;
+  readonly _matrix : mat4;
+  readonly _wmatrix: mat4;
 
-  _wposition: Float32Array;
+  readonly _wposition: Float32Array;
   
-  _parent: Node|null;
+  _parent  : Node|null;
   _children: Node[];
 
-  _invalidM: boolean;
-  _invalidW: boolean;
+  private _invalidM: boolean;
+  private _invalidW: boolean;
 
   constructor(){
 
@@ -134,9 +134,7 @@ class Node {
   /**
    * update world matrix and descendants.
    */
-  updateWorldMatrix( skipParents : boolean ){
-    skipParents = !!skipParents;
-
+  updateWorldMatrix( skipParents : boolean = false ){
 
     this.updateMatrix();
     const invalidWorldMatrix = this._hasInvalidWorldMatrix( skipParents );
@@ -153,7 +151,7 @@ class Node {
   }
 
 
-  _computeWorldMatrix( skipParents : boolean ){
+  private _computeWorldMatrix( skipParents : boolean ){
 
     const p = this._parent;
 
@@ -173,7 +171,7 @@ class Node {
 
 
 
-  _hasInvalidWorldMatrix( skipParents : boolean ) : boolean {
+  private _hasInvalidWorldMatrix( skipParents : boolean ) : boolean {
     return this._invalidW || ( !skipParents && this._parent !== null && this._parent._hasInvalidWorldMatrix( false ) );
   }
 
