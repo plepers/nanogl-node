@@ -28,7 +28,7 @@ declare class Node {
     invalidate(): void;
     updateMatrix(): void;
     updateWorldMatrix(skipParents?: boolean): void;
-    private _computeWorldMatrix;
-    private _hasInvalidWorldMatrix;
+    _computeWorldMatrix(skipParents: boolean): void;
+    _hasInvalidWorldMatrix(skipParents: boolean): boolean;
 }
 export default Node;
