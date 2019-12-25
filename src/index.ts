@@ -151,7 +151,7 @@ class Node {
   }
 
 
-  private _computeWorldMatrix( skipParents : boolean ){
+  _computeWorldMatrix( skipParents : boolean ){
 
     const p = this._parent;
 
@@ -171,7 +171,7 @@ class Node {
 
 
 
-  private _hasInvalidWorldMatrix( skipParents : boolean ) : boolean {
+  _hasInvalidWorldMatrix( skipParents : boolean ) : boolean {
     return this._invalidW || ( !skipParents && this._parent !== null && this._parent._hasInvalidWorldMatrix( false ) );
   }
 
