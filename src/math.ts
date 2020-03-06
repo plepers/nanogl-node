@@ -1,10 +1,8 @@
 import { mat3, mat4, vec3, quat } from "gl-matrix";
 
-
 const M3 : mat3   = mat3.create();
 
-
-function decomposeMat4( m4 : mat4, p:vec3, q:quat, s:vec3 ){
+export function decomposeMat4( m4 : mat4, p:vec3, q:quat, s:vec3 ){
 
     p[0] = m4[12];
     p[1] = m4[13];
@@ -30,6 +28,3 @@ function decomposeMat4( m4 : mat4, p:vec3, q:quat, s:vec3 ){
 
 }
 
-export = {
-  decomposeMat4 : decomposeMat4
-};

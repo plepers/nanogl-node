@@ -1,5 +1,6 @@
-import math = require( './math' );
+
 import { mat3, vec3, quat, mat4 } from 'gl-matrix';
+import { decomposeMat4 } from './math';
 
 
 const MAT3 = mat3.create(),
@@ -11,20 +12,20 @@ const MAT3 = mat3.create(),
 
 class Node {
 
-  position: vec3;
-  rotation: quat;
-  scale   : vec3;
+  readonly position: vec3;
+  readonly rotation: quat;
+  readonly scale   : vec3;
 
-  _matrix : mat4;
-  _wmatrix: mat4;
+  readonly _matrix : mat4;
+  readonly _wmatrix: mat4;
 
-  _wposition: Float32Array;
+  readonly _wposition: Float32Array;
   
-  _parent: Node|null;
+  _parent  : Node|null;
   _children: Node[];
 
-  _invalidM: boolean;
-  _invalidW: boolean;
+  private _invalidM: boolean;
+  private _invalidW: boolean;
 
   constructor(){
 
@@ -83,7 +84,7 @@ class Node {
 
   setMatrix( m4 : mat4 ){
     mat4.copy( this._matrix, m4 );
-    math.decomposeMat4( m4, this.position, this.rotation, this.scale );
+    decomposeMat4( m4, this.position, this.rotation, this.scale );
     this._invalidM = false;
     this._invalidW = true;
   }
@@ -133,9 +134,7 @@ class Node {
   /**
    * update world matrix and descendants.
    */
-  updateWorldMatrix( skipParents : boolean ){
-    skipParents = !!skipParents;
-
+  updateWorldMatrix( skipParents : boolean = false ){
 
     this.updateMatrix();
     const invalidWorldMatrix = this._hasInvalidWorldMatrix( skipParents );
@@ -180,4 +179,4 @@ class Node {
 };
 
 
-export = Node;
+export default Node

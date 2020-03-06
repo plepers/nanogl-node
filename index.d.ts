@@ -1,15 +1,15 @@
 import { vec3, quat, mat4 } from 'gl-matrix';
 declare class Node {
-    position: vec3;
-    rotation: quat;
-    scale: vec3;
-    _matrix: mat4;
-    _wmatrix: mat4;
-    _wposition: Float32Array;
+    readonly position: vec3;
+    readonly rotation: quat;
+    readonly scale: vec3;
+    readonly _matrix: mat4;
+    readonly _wmatrix: mat4;
+    readonly _wposition: Float32Array;
     _parent: Node | null;
     _children: Node[];
-    _invalidM: boolean;
-    _invalidW: boolean;
+    private _invalidM;
+    private _invalidW;
     constructor();
     rotateX(rad: number): void;
     rotateY(rad: number): void;
@@ -27,8 +27,8 @@ declare class Node {
     remove(child: Node): void;
     invalidate(): void;
     updateMatrix(): void;
-    updateWorldMatrix(skipParents: boolean): void;
+    updateWorldMatrix(skipParents?: boolean): void;
     _computeWorldMatrix(skipParents: boolean): void;
     _hasInvalidWorldMatrix(skipParents: boolean): boolean;
 }
-export = Node;
+export default Node;

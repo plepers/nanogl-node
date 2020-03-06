@@ -1,8 +1,8 @@
 {
   "name": "nanogl-node",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "handle objects transform in 3D space",
-  "main": "node.js",
+  "main": "index.js",
   "scripts": {
     "test": "tsc && karma start"
   },
@@ -21,14 +21,29 @@
     "url": "https://github.com/plepers/nanogl-node/issues"
   },
   "homepage": "https://github.com/plepers/nanogl-node#readme",
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "@babel/preset-env"
+          ]
+        }
+      ]
+    ]
+  },
+  "types": "index.d.ts",
   "dependencies": {
-    "@types/gl-matrix": "^2.4.5",
-    "gl-matrix": "^3.1.0"
+    "@types/gl-matrix": "2.3.1",
+    "gl-matrix": "2.3.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "babelify": "^10.0.0",
     "browserify": "^16.5.0",
     "expect.js": "^0.3.1",
-    "jshint": "^2.10.3",
     "karma": "^4.4.1",
     "karma-browserify": "^6.1.0",
     "karma-chrome-launcher": "^3.1.0",
