@@ -22,12 +22,21 @@
   },
   "homepage": "https://github.com/plepers/nanogl-node#readme",
   "browserify": {
-    "transform": [["babelify", { "presets": ["@babel/preset-env"] }]]
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "@babel/preset-env"
+          ]
+        }
+      ]
+    ]
   },
   "types": "index.d.ts",
   "dependencies": {
-    "@types/gl-matrix": "^2.4.5",
-    "gl-matrix": "^3.1.0"
+    "@types/gl-matrix": "2.3.1",
+    "gl-matrix": "2.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",
