@@ -3,47 +3,32 @@ import { mat3, vec3, quat, mat4 } from 'gl-matrix';
 import { decomposeMat4 } from './math';
 
 
-const MAT3 = mat3.create(),
-      VX:vec3   = <vec3>(new Float32Array( MAT3.buffer, 0*4, 3 )),
-      VY:vec3   = <vec3>(new Float32Array( MAT3.buffer, 3*4, 3 )),
-      VZ:vec3   = <vec3>(new Float32Array( MAT3.buffer, 6*4, 3 )),
-      VUP  = vec3.fromValues( 0, 1, 0 );
+const MAT3 = mat3.create()
+const VX = new Float32Array( MAT3.buffer, 0*4, 3 ) as vec3
+const VY = new Float32Array( MAT3.buffer, 3*4, 3 ) as vec3
+const VZ = new Float32Array( MAT3.buffer, 6*4, 3 ) as vec3
+const VUP  = vec3.fromValues( 0, 1, 0 );
 
 
 class Node {
 
-  readonly position: vec3;
-  readonly rotation: quat;
-  readonly scale   : vec3;
+  readonly position = vec3.create();
+  readonly rotation = quat.create();
+  readonly scale    = vec3.fromValues(1, 1, 1);
 
-  readonly _matrix : mat4;
-  readonly _wmatrix: mat4;
+  readonly _matrix  = mat4.create();
+  readonly _wmatrix = mat4.create();
 
-  readonly _wposition: Float32Array;
+  readonly _wposition: vec3;
   
-  _parent  : Node|null;
-  _children: Node[];
+  _parent  : Node|null = null;
+  _children: Node[] = [];
 
-  private _invalidM: boolean;
-  private _invalidW: boolean;
+  private _invalidM = true;
+  private _invalidW = true;
 
   constructor(){
-
-    this.position   = vec3.create();
-    this.rotation   = quat.create();
-    this.scale      = vec3.fromValues(1, 1, 1);
-
-    this._matrix    = mat4.create();
-    this._wmatrix   = mat4.create();
-
-    this._wposition = new Float32Array( this._wmatrix.buffer, 12*4, 3 );
-
-    this._parent    = null;
-    this._children  = [];
-
-    this._invalidM  = true;
-    this._invalidW  = true;
-
+    this._wposition = new Float32Array( this._wmatrix.buffer, 12*4, 3 ) as vec3;
   }
 
 
