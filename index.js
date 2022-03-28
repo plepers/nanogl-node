@@ -1,6 +1,10 @@
 import { mat3, vec3, quat, mat4 } from 'gl-matrix';
 import { decomposeMat4 } from './math';
-const MAT3 = mat3.create(), VX = (new Float32Array(MAT3.buffer, 0 * 4, 3)), VY = (new Float32Array(MAT3.buffer, 3 * 4, 3)), VZ = (new Float32Array(MAT3.buffer, 6 * 4, 3)), VUP = vec3.fromValues(0, 1, 0);
+const MAT3 = mat3.create();
+const VX = new Float32Array(MAT3.buffer, 0 * 4, 3);
+const VY = new Float32Array(MAT3.buffer, 3 * 4, 3);
+const VZ = new Float32Array(MAT3.buffer, 6 * 4, 3);
+const VUP = vec3.fromValues(0, 1, 0);
 class Node {
     constructor() {
         this.position = vec3.create();
@@ -8,11 +12,11 @@ class Node {
         this.scale = vec3.fromValues(1, 1, 1);
         this._matrix = mat4.create();
         this._wmatrix = mat4.create();
-        this._wposition = new Float32Array(this._wmatrix.buffer, 12 * 4, 3);
         this._parent = null;
         this._children = [];
         this._invalidM = true;
         this._invalidW = true;
+        this._wposition = new Float32Array(this._wmatrix.buffer, 12 * 4, 3);
     }
     rotateX(rad) { quat.rotateX(this.rotation, this.rotation, rad); this.invalidate(); }
     rotateY(rad) { quat.rotateY(this.rotation, this.rotation, rad); this.invalidate(); }

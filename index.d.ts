@@ -5,7 +5,7 @@ declare class Node {
     readonly scale: vec3;
     readonly _matrix: mat4;
     readonly _wmatrix: mat4;
-    readonly _wposition: Float32Array;
+    readonly _wposition: vec3;
     _parent: Node | null;
     _children: Node[];
     private _invalidM;
