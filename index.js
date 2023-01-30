@@ -5,10 +5,26 @@ const VX = new Float32Array(MAT3.buffer, 0 * 4, 3);
 const VY = new Float32Array(MAT3.buffer, 3 * 4, 3);
 const VZ = new Float32Array(MAT3.buffer, 6 * 4, 3);
 const VUP = vec3.fromValues(0, 1, 0);
-class Node {
+/**
+ * This is the base class for all 3D objects. It's like a simplified equivalent to Object3D for three.js.
+ * @public
+ */
+export default class Node {
     constructor() {
+        /**
+         * Node's local position.
+         * @defaultValue (0, 0, 0)
+         */
         this.position = vec3.create();
+        /**
+         * Node's local rotation.
+         * @defaultValue Identity quaternion
+         */
         this.rotation = quat.create();
+        /**
+         * Node's local scale.
+         * @defaultValue (1, 1, 1)
+         */
         this.scale = vec3.fromValues(1, 1, 1);
         this._matrix = mat4.create();
         this._wmatrix = mat4.create();
@@ -18,8 +34,20 @@ class Node {
         this._invalidW = true;
         this._wposition = new Float32Array(this._wmatrix.buffer, 12 * 4, 3);
     }
+    /**
+     * Rotate node around X-axis.
+     * @param rad - Rotation angle in radians.
+     */
     rotateX(rad) { quat.rotateX(this.rotation, this.rotation, rad); this.invalidate(); }
+    /**
+     * Rotate node around Y-axis.
+     * @param rad - Rotation angle in radians.
+     */
     rotateY(rad) { quat.rotateY(this.rotation, this.rotation, rad); this.invalidate(); }
+    /**
+     * Rotate node around Z-axis.
+     * @param rad - Rotation angle in radians.
+     */
     rotateZ(rad) { quat.rotateZ(this.rotation, this.rotation, rad); this.invalidate(); }
     set x(v) { this.position[0] = v; this.invalidate(); }
     set y(v) { this.position[1] = v; this.invalidate(); }
@@ -27,12 +55,20 @@ class Node {
     get x() { return this.position[0]; }
     get y() { return this.position[1]; }
     get z() { return this.position[2]; }
+    /**
+     * Set node scale for all axis.
+     * @param s - Scale factor.
+     */
     setScale(s) {
         this.scale[0] =
             this.scale[1] =
                 this.scale[2] = s;
         this.invalidate();
     }
+    /**
+     * Rotate node to look at target position.
+     * @param tgt - Target position to look at.
+     */
     lookAt(tgt) {
         vec3.subtract(VZ, this.position, tgt);
         vec3.normalize(VZ, VZ);
@@ -42,12 +78,20 @@ class Node {
         quat.fromMat3(this.rotation, MAT3);
         this.invalidate();
     }
+    /**
+     * Set node transformation matrix.
+     * @param m4 - Matrix to assign to node.
+     */
     setMatrix(m4) {
         mat4.copy(this._matrix, m4);
         decomposeMat4(m4, this.position, this.rotation, this.scale);
         this._invalidM = false;
         this._invalidW = true;
     }
+    /**
+     * Add child to this node. If child already has a parent, it will be removed as a node can only have one parent.
+     * @param child - Node to add as this node's child.
+     */
     add(child) {
         if (this._children.indexOf(child) === -1) {
             if (child._parent !== null) {
@@ -57,6 +101,10 @@ class Node {
             child._parent = this;
         }
     }
+    /**
+     * Remove child from this node's children.
+     * @param child - Node to remove from this node's children.
+     */
     remove(child) {
         const i = this._children.indexOf(child);
         if (i > -1) {
@@ -64,16 +112,26 @@ class Node {
             child._parent = null;
         }
     }
+    /**
+     * Invalidate this node's local matrix and world matrix.
+     */
     invalidate() {
         this._invalidM = true;
         this._invalidW = true;
     }
+    /**
+     * Update node's local matrix, if it has been declared invalid.
+     */
     updateMatrix() {
         if (this._invalidM) {
             mat4.fromRotationTranslationScale(this._matrix, this.rotation, this.position, this.scale);
             this._invalidM = false;
         }
     }
+    /**
+     * Update node's world matrix if it has been declared invalid, and recursively update all children's world matrices.
+     * @param skipParents - If true, parent's world matrix will not be updated.
+     */
     updateWorldMatrix(skipParents = false) {
         this.updateMatrix();
         const invalidWorldMatrix = this._hasInvalidWorldMatrix(skipParents);
@@ -105,4 +163,3 @@ class Node {
     }
 }
 ;
-export default Node;
