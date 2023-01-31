@@ -4,7 +4,8 @@
   "description": "handle objects transform in 3D space",
   "main": "index.js",
   "scripts": {
-    "test": "tsc && karma start"
+    "test": "tsc && karma start",
+    "docs": "typedoc && del docs/** '!docs/data.json'"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
     "@babel/preset-env": "^7.7.4",
     "babelify": "^10.0.0",
     "browserify": "^16.5.0",
+    "del-cli": "^5.0.0",
     "expect.js": "^0.3.1",
     "karma": "^4.4.1",
     "karma-browserify": "^6.1.0",
@@ -53,7 +55,9 @@
     "karma-sauce-launcher": "^2.0.2",
     "mocha": "^6.2.2",
     "sinon": "^7.5.0",
-    "typescript": "^3.7.2",
+    "typedoc": "^0.23.24",
+    "typedoc-plugin-rename-defaults": "^0.6.4",
+    "typescript": "^4.9.5",
     "watchify": "^3.11.1"
   }
 }

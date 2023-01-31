@@ -1,1152 +1,1396 @@
 {
-  "metadata": {
-    "toolPackage": "@microsoft/api-extractor",
-    "toolVersion": "7.34.0",
-    "schemaVersion": 1011,
-    "oldestForwardsCompatibleVersion": 1001,
-    "tsdocConfig": {
-      "$schema": "https://developer.microsoft.com/json-schemas/tsdoc/v0/tsdoc.schema.json",
-      "noStandardTags": true,
-      "tagDefinitions": [
-        {
-          "tagName": "@alpha",
-          "syntaxKind": "modifier"
-        },
-        {
-          "tagName": "@beta",
-          "syntaxKind": "modifier"
-        },
-        {
-          "tagName": "@defaultValue",
-          "syntaxKind": "block"
-        },
-        {
-          "tagName": "@decorator",
-          "syntaxKind": "block",
-          "allowMultiple": true
-        },
-        {
-          "tagName": "@deprecated",
-          "syntaxKind": "block"
-        },
-        {
-          "tagName": "@eventProperty",
-          "syntaxKind": "modifier"
-        },
-        {
-          "tagName": "@example",
-          "syntaxKind": "block",
-          "allowMultiple": true
-        },
-        {
-          "tagName": "@experimental",
-          "syntaxKind": "modifier"
-        },
-        {
-          "tagName": "@inheritDoc",
-          "syntaxKind": "inline"
-        },
-        {
-          "tagName": "@internal",
-          "syntaxKind": "modifier"
-        },
-        {
-          "tagName": "@label",
-          "syntaxKind": "inline"
-        },
-        {
-          "tagName": "@link",
-          "syntaxKind": "inline",
-          "allowMultiple": true
-        },
-        {
-          "tagName": "@override",
-          "syntaxKind": "modifier"
-        },
-        {
-          "tagName": "@packageDocumentation",
-          "syntaxKind": "modifier"
-        },
-        {
-          "tagName": "@param",
-          "syntaxKind": "block",
-          "allowMultiple": true
-        },
-        {
-          "tagName": "@privateRemarks",
-          "syntaxKind": "block"
-        },
-        {
-          "tagName": "@public",
-          "syntaxKind": "modifier"
-        },
-        {
-          "tagName": "@readonly",
-          "syntaxKind": "modifier"
-        },
-        {
-          "tagName": "@remarks",
-          "syntaxKind": "block"
-        },
-        {
-          "tagName": "@returns",
-          "syntaxKind": "block"
-        },
-        {
-          "tagName": "@sealed",
-          "syntaxKind": "modifier"
-        },
-        {
-          "tagName": "@see",
-          "syntaxKind": "block"
-        },
-        {
-          "tagName": "@throws",
-          "syntaxKind": "block",
-          "allowMultiple": true
-        },
-        {
-          "tagName": "@typeParam",
-          "syntaxKind": "block",
-          "allowMultiple": true
-        },
-        {
-          "tagName": "@virtual",
-          "syntaxKind": "modifier"
-        },
-        {
-          "tagName": "@betaDocumentation",
-          "syntaxKind": "modifier"
-        },
-        {
-          "tagName": "@internalRemarks",
-          "syntaxKind": "block"
-        },
-        {
-          "tagName": "@preapproved",
-          "syntaxKind": "modifier"
-        }
-      ],
-      "supportForTags": {
-        "@alpha": true,
-        "@beta": true,
-        "@defaultValue": true,
-        "@decorator": true,
-        "@deprecated": true,
-        "@eventProperty": true,
-        "@example": true,
-        "@experimental": true,
-        "@inheritDoc": true,
-        "@internal": true,
-        "@label": true,
-        "@link": true,
-        "@override": true,
-        "@packageDocumentation": true,
-        "@param": true,
-        "@privateRemarks": true,
-        "@public": true,
-        "@readonly": true,
-        "@remarks": true,
-        "@returns": true,
-        "@sealed": true,
-        "@see": true,
-        "@throws": true,
-        "@typeParam": true,
-        "@virtual": true,
-        "@betaDocumentation": true,
-        "@internalRemarks": true,
-        "@preapproved": true
-      },
-      "reportUnsupportedHtmlElements": false
-    }
-  },
-  "kind": "Package",
-  "canonicalReference": "nanogl-node!",
-  "docComment": "",
-  "name": "nanogl-node",
-  "preserveMemberOrder": false,
-  "members": [
-    {
-      "kind": "EntryPoint",
-      "canonicalReference": "nanogl-node!",
-      "name": "",
-      "preserveMemberOrder": false,
-      "members": [
-        {
-          "kind": "Class",
-          "canonicalReference": "nanogl-node!Node_2:class",
-          "docComment": "/**\n * This is the base class for all 3D objects. It's like a simplified equivalent to Object3D for three.js.\n *\n * @public\n */\n",
-          "excerptTokens": [
-            {
-              "kind": "Content",
-              "text": "export default class Node "
-            }
-          ],
-          "fileUrlPath": "index.d.ts",
-          "releaseTag": "Public",
-          "isAbstract": false,
-          "name": "Node_2",
-          "preserveMemberOrder": false,
-          "members": [
-            {
-              "kind": "Property",
-              "canonicalReference": "nanogl-node!Node_2#_children:member",
-              "docComment": "",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "_children: "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "Node",
-                  "canonicalReference": "nanogl-node!Node_2:class"
-                },
-                {
-                  "kind": "Content",
-                  "text": "[]"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isReadonly": false,
-              "isOptional": false,
-              "releaseTag": "Public",
-              "name": "_children",
-              "propertyTypeTokenRange": {
-                "startIndex": 1,
-                "endIndex": 3
-              },
-              "isStatic": false,
-              "isProtected": false,
-              "isAbstract": false
-            },
-            {
-              "kind": "Method",
-              "canonicalReference": "nanogl-node!Node_2#_computeWorldMatrix:member(1)",
-              "docComment": "",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "_computeWorldMatrix(skipParents: "
-                },
-                {
-                  "kind": "Content",
-                  "text": "boolean"
-                },
-                {
-                  "kind": "Content",
-                  "text": "): "
-                },
-                {
-                  "kind": "Content",
-                  "text": "void"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isStatic": false,
-              "returnTypeTokenRange": {
-                "startIndex": 3,
-                "endIndex": 4
-              },
-              "releaseTag": "Public",
-              "isProtected": false,
-              "overloadIndex": 1,
-              "parameters": [
-                {
-                  "parameterName": "skipParents",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 1,
-                    "endIndex": 2
-                  },
-                  "isOptional": false
-                }
-              ],
-              "isOptional": false,
-              "isAbstract": false,
-              "name": "_computeWorldMatrix"
-            },
-            {
-              "kind": "Method",
-              "canonicalReference": "nanogl-node!Node_2#_hasInvalidWorldMatrix:member(1)",
-              "docComment": "",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "_hasInvalidWorldMatrix(skipParents: "
-                },
-                {
-                  "kind": "Content",
-                  "text": "boolean"
-                },
-                {
-                  "kind": "Content",
-                  "text": "): "
-                },
-                {
-                  "kind": "Content",
-                  "text": "boolean"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isStatic": false,
-              "returnTypeTokenRange": {
-                "startIndex": 3,
-                "endIndex": 4
-              },
-              "releaseTag": "Public",
-              "isProtected": false,
-              "overloadIndex": 1,
-              "parameters": [
-                {
-                  "parameterName": "skipParents",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 1,
-                    "endIndex": 2
-                  },
-                  "isOptional": false
-                }
-              ],
-              "isOptional": false,
-              "isAbstract": false,
-              "name": "_hasInvalidWorldMatrix"
-            },
-            {
-              "kind": "Property",
-              "canonicalReference": "nanogl-node!Node_2#_matrix:member",
-              "docComment": "",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "readonly _matrix: "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "mat4",
-                  "canonicalReference": "!\"\\\"gl-matrix\\\"\".mat4:class"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isReadonly": true,
-              "isOptional": false,
-              "releaseTag": "Public",
-              "name": "_matrix",
-              "propertyTypeTokenRange": {
-                "startIndex": 1,
-                "endIndex": 2
-              },
-              "isStatic": false,
-              "isProtected": false,
-              "isAbstract": false
-            },
-            {
-              "kind": "Property",
-              "canonicalReference": "nanogl-node!Node_2#_parent:member",
-              "docComment": "",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "_parent: "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "Node",
-                  "canonicalReference": "nanogl-node!Node_2:class"
-                },
-                {
-                  "kind": "Content",
-                  "text": " | null"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isReadonly": false,
-              "isOptional": false,
-              "releaseTag": "Public",
-              "name": "_parent",
-              "propertyTypeTokenRange": {
-                "startIndex": 1,
-                "endIndex": 3
-              },
-              "isStatic": false,
-              "isProtected": false,
-              "isAbstract": false
-            },
-            {
-              "kind": "Property",
-              "canonicalReference": "nanogl-node!Node_2#_wmatrix:member",
-              "docComment": "",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "readonly _wmatrix: "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "mat4",
-                  "canonicalReference": "!\"\\\"gl-matrix\\\"\".mat4:class"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isReadonly": true,
-              "isOptional": false,
-              "releaseTag": "Public",
-              "name": "_wmatrix",
-              "propertyTypeTokenRange": {
-                "startIndex": 1,
-                "endIndex": 2
-              },
-              "isStatic": false,
-              "isProtected": false,
-              "isAbstract": false
-            },
-            {
-              "kind": "Property",
-              "canonicalReference": "nanogl-node!Node_2#_wposition:member",
-              "docComment": "",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "readonly _wposition: "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "vec3",
-                  "canonicalReference": "!\"\\\"gl-matrix\\\"\".vec3:class"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isReadonly": true,
-              "isOptional": false,
-              "releaseTag": "Public",
-              "name": "_wposition",
-              "propertyTypeTokenRange": {
-                "startIndex": 1,
-                "endIndex": 2
-              },
-              "isStatic": false,
-              "isProtected": false,
-              "isAbstract": false
-            },
-            {
-              "kind": "Constructor",
-              "canonicalReference": "nanogl-node!Node_2:constructor(1)",
-              "docComment": "/**\n * Constructs a new instance of the `Node` class\n */\n",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "constructor();"
-                }
-              ],
-              "releaseTag": "Public",
-              "isProtected": false,
-              "overloadIndex": 1,
-              "parameters": []
-            },
-            {
-              "kind": "Method",
-              "canonicalReference": "nanogl-node!Node_2#add:member(1)",
-              "docComment": "/**\n * Add child to this node. If child already has a parent, it will be removed as a node can only have one parent.\n *\n * @param child - Node to add as this node's child.\n */\n",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "add(child: "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "Node",
-                  "canonicalReference": "nanogl-node!Node_2:class"
-                },
-                {
-                  "kind": "Content",
-                  "text": "): "
-                },
-                {
-                  "kind": "Content",
-                  "text": "void"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isStatic": false,
-              "returnTypeTokenRange": {
-                "startIndex": 3,
-                "endIndex": 4
-              },
-              "releaseTag": "Public",
-              "isProtected": false,
-              "overloadIndex": 1,
-              "parameters": [
-                {
-                  "parameterName": "child",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 1,
-                    "endIndex": 2
-                  },
-                  "isOptional": false
-                }
-              ],
-              "isOptional": false,
-              "isAbstract": false,
-              "name": "add"
-            },
-            {
-              "kind": "Method",
-              "canonicalReference": "nanogl-node!Node_2#invalidate:member(1)",
-              "docComment": "/**\n * Invalidate this node's local matrix and world matrix.\n */\n",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "invalidate(): "
-                },
-                {
-                  "kind": "Content",
-                  "text": "void"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isStatic": false,
-              "returnTypeTokenRange": {
-                "startIndex": 1,
-                "endIndex": 2
-              },
-              "releaseTag": "Public",
-              "isProtected": false,
-              "overloadIndex": 1,
-              "parameters": [],
-              "isOptional": false,
-              "isAbstract": false,
-              "name": "invalidate"
-            },
-            {
-              "kind": "Method",
-              "canonicalReference": "nanogl-node!Node_2#lookAt:member(1)",
-              "docComment": "/**\n * Rotate node to look at target position.\n *\n * @param tgt - Target position to look at.\n */\n",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "lookAt(tgt: "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "vec3",
-                  "canonicalReference": "!\"\\\"gl-matrix\\\"\".vec3:class"
-                },
-                {
-                  "kind": "Content",
-                  "text": "): "
-                },
-                {
-                  "kind": "Content",
-                  "text": "void"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isStatic": false,
-              "returnTypeTokenRange": {
-                "startIndex": 3,
-                "endIndex": 4
-              },
-              "releaseTag": "Public",
-              "isProtected": false,
-              "overloadIndex": 1,
-              "parameters": [
-                {
-                  "parameterName": "tgt",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 1,
-                    "endIndex": 2
-                  },
-                  "isOptional": false
-                }
-              ],
-              "isOptional": false,
-              "isAbstract": false,
-              "name": "lookAt"
-            },
-            {
-              "kind": "Property",
-              "canonicalReference": "nanogl-node!Node_2#position:member",
-              "docComment": "/**\n * Node's local position.\n *\n * @defaultValue\n *\n * (0, 0, 0)\n */\n",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "readonly position: "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "vec3",
-                  "canonicalReference": "!\"\\\"gl-matrix\\\"\".vec3:class"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isReadonly": true,
-              "isOptional": false,
-              "releaseTag": "Public",
-              "name": "position",
-              "propertyTypeTokenRange": {
-                "startIndex": 1,
-                "endIndex": 2
-              },
-              "isStatic": false,
-              "isProtected": false,
-              "isAbstract": false
-            },
-            {
-              "kind": "Method",
-              "canonicalReference": "nanogl-node!Node_2#remove:member(1)",
-              "docComment": "/**\n * Remove child from this node's children.\n *\n * @param child - Node to remove from this node's children.\n */\n",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "remove(child: "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "Node",
-                  "canonicalReference": "nanogl-node!Node_2:class"
-                },
-                {
-                  "kind": "Content",
-                  "text": "): "
-                },
-                {
-                  "kind": "Content",
-                  "text": "void"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isStatic": false,
-              "returnTypeTokenRange": {
-                "startIndex": 3,
-                "endIndex": 4
-              },
-              "releaseTag": "Public",
-              "isProtected": false,
-              "overloadIndex": 1,
-              "parameters": [
-                {
-                  "parameterName": "child",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 1,
-                    "endIndex": 2
-                  },
-                  "isOptional": false
-                }
-              ],
-              "isOptional": false,
-              "isAbstract": false,
-              "name": "remove"
-            },
-            {
-              "kind": "Method",
-              "canonicalReference": "nanogl-node!Node_2#rotateX:member(1)",
-              "docComment": "/**\n * Rotate node around X-axis.\n *\n * @param rad - Rotation angle in radians.\n */\n",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "rotateX(rad: "
-                },
-                {
-                  "kind": "Content",
-                  "text": "number"
-                },
-                {
-                  "kind": "Content",
-                  "text": "): "
-                },
-                {
-                  "kind": "Content",
-                  "text": "void"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isStatic": false,
-              "returnTypeTokenRange": {
-                "startIndex": 3,
-                "endIndex": 4
-              },
-              "releaseTag": "Public",
-              "isProtected": false,
-              "overloadIndex": 1,
-              "parameters": [
-                {
-                  "parameterName": "rad",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 1,
-                    "endIndex": 2
-                  },
-                  "isOptional": false
-                }
-              ],
-              "isOptional": false,
-              "isAbstract": false,
-              "name": "rotateX"
-            },
-            {
-              "kind": "Method",
-              "canonicalReference": "nanogl-node!Node_2#rotateY:member(1)",
-              "docComment": "/**\n * Rotate node around Y-axis.\n *\n * @param rad - Rotation angle in radians.\n */\n",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "rotateY(rad: "
-                },
-                {
-                  "kind": "Content",
-                  "text": "number"
-                },
-                {
-                  "kind": "Content",
-                  "text": "): "
-                },
-                {
-                  "kind": "Content",
-                  "text": "void"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isStatic": false,
-              "returnTypeTokenRange": {
-                "startIndex": 3,
-                "endIndex": 4
-              },
-              "releaseTag": "Public",
-              "isProtected": false,
-              "overloadIndex": 1,
-              "parameters": [
-                {
-                  "parameterName": "rad",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 1,
-                    "endIndex": 2
-                  },
-                  "isOptional": false
-                }
-              ],
-              "isOptional": false,
-              "isAbstract": false,
-              "name": "rotateY"
-            },
-            {
-              "kind": "Method",
-              "canonicalReference": "nanogl-node!Node_2#rotateZ:member(1)",
-              "docComment": "/**\n * Rotate node around Z-axis.\n *\n * @param rad - Rotation angle in radians.\n */\n",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "rotateZ(rad: "
-                },
-                {
-                  "kind": "Content",
-                  "text": "number"
-                },
-                {
-                  "kind": "Content",
-                  "text": "): "
-                },
-                {
-                  "kind": "Content",
-                  "text": "void"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isStatic": false,
-              "returnTypeTokenRange": {
-                "startIndex": 3,
-                "endIndex": 4
-              },
-              "releaseTag": "Public",
-              "isProtected": false,
-              "overloadIndex": 1,
-              "parameters": [
-                {
-                  "parameterName": "rad",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 1,
-                    "endIndex": 2
-                  },
-                  "isOptional": false
-                }
-              ],
-              "isOptional": false,
-              "isAbstract": false,
-              "name": "rotateZ"
-            },
-            {
-              "kind": "Property",
-              "canonicalReference": "nanogl-node!Node_2#rotation:member",
-              "docComment": "/**\n * Node's local rotation.\n *\n * @defaultValue\n *\n * Identity quaternion\n */\n",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "readonly rotation: "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "quat",
-                  "canonicalReference": "!\"\\\"gl-matrix\\\"\".quat:class"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isReadonly": true,
-              "isOptional": false,
-              "releaseTag": "Public",
-              "name": "rotation",
-              "propertyTypeTokenRange": {
-                "startIndex": 1,
-                "endIndex": 2
-              },
-              "isStatic": false,
-              "isProtected": false,
-              "isAbstract": false
-            },
-            {
-              "kind": "Property",
-              "canonicalReference": "nanogl-node!Node_2#scale:member",
-              "docComment": "/**\n * Node's local scale.\n *\n * @defaultValue\n *\n * (1, 1, 1)\n */\n",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "readonly scale: "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "vec3",
-                  "canonicalReference": "!\"\\\"gl-matrix\\\"\".vec3:class"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isReadonly": true,
-              "isOptional": false,
-              "releaseTag": "Public",
-              "name": "scale",
-              "propertyTypeTokenRange": {
-                "startIndex": 1,
-                "endIndex": 2
-              },
-              "isStatic": false,
-              "isProtected": false,
-              "isAbstract": false
-            },
-            {
-              "kind": "Method",
-              "canonicalReference": "nanogl-node!Node_2#setMatrix:member(1)",
-              "docComment": "/**\n * Set node transformation matrix.\n *\n * @param m4 - Matrix to assign to node.\n */\n",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "setMatrix(m4: "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "mat4",
-                  "canonicalReference": "!\"\\\"gl-matrix\\\"\".mat4:class"
-                },
-                {
-                  "kind": "Content",
-                  "text": "): "
-                },
-                {
-                  "kind": "Content",
-                  "text": "void"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isStatic": false,
-              "returnTypeTokenRange": {
-                "startIndex": 3,
-                "endIndex": 4
-              },
-              "releaseTag": "Public",
-              "isProtected": false,
-              "overloadIndex": 1,
-              "parameters": [
-                {
-                  "parameterName": "m4",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 1,
-                    "endIndex": 2
-                  },
-                  "isOptional": false
-                }
-              ],
-              "isOptional": false,
-              "isAbstract": false,
-              "name": "setMatrix"
-            },
-            {
-              "kind": "Method",
-              "canonicalReference": "nanogl-node!Node_2#setScale:member(1)",
-              "docComment": "/**\n * Set node scale for all axis.\n *\n * @param s - Scale factor.\n */\n",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "setScale(s: "
-                },
-                {
-                  "kind": "Content",
-                  "text": "number"
-                },
-                {
-                  "kind": "Content",
-                  "text": "): "
-                },
-                {
-                  "kind": "Content",
-                  "text": "void"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isStatic": false,
-              "returnTypeTokenRange": {
-                "startIndex": 3,
-                "endIndex": 4
-              },
-              "releaseTag": "Public",
-              "isProtected": false,
-              "overloadIndex": 1,
-              "parameters": [
-                {
-                  "parameterName": "s",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 1,
-                    "endIndex": 2
-                  },
-                  "isOptional": false
-                }
-              ],
-              "isOptional": false,
-              "isAbstract": false,
-              "name": "setScale"
-            },
-            {
-              "kind": "Method",
-              "canonicalReference": "nanogl-node!Node_2#updateMatrix:member(1)",
-              "docComment": "/**\n * Update node's local matrix, if it has been declared invalid.\n */\n",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "updateMatrix(): "
-                },
-                {
-                  "kind": "Content",
-                  "text": "void"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isStatic": false,
-              "returnTypeTokenRange": {
-                "startIndex": 1,
-                "endIndex": 2
-              },
-              "releaseTag": "Public",
-              "isProtected": false,
-              "overloadIndex": 1,
-              "parameters": [],
-              "isOptional": false,
-              "isAbstract": false,
-              "name": "updateMatrix"
-            },
-            {
-              "kind": "Method",
-              "canonicalReference": "nanogl-node!Node_2#updateWorldMatrix:member(1)",
-              "docComment": "/**\n * Update node's world matrix if it has been declared invalid, and recursively update all children's world matrices.\n *\n * @param skipParents - If true, parent's world matrix will not be updated.\n */\n",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "updateWorldMatrix(skipParents?: "
-                },
-                {
-                  "kind": "Content",
-                  "text": "boolean"
-                },
-                {
-                  "kind": "Content",
-                  "text": "): "
-                },
-                {
-                  "kind": "Content",
-                  "text": "void"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isStatic": false,
-              "returnTypeTokenRange": {
-                "startIndex": 3,
-                "endIndex": 4
-              },
-              "releaseTag": "Public",
-              "isProtected": false,
-              "overloadIndex": 1,
-              "parameters": [
-                {
-                  "parameterName": "skipParents",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 1,
-                    "endIndex": 2
-                  },
-                  "isOptional": true
-                }
-              ],
-              "isOptional": false,
-              "isAbstract": false,
-              "name": "updateWorldMatrix"
-            },
-            {
-              "kind": "Property",
-              "canonicalReference": "nanogl-node!Node_2#x:member",
-              "docComment": "",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "set x(v: "
-                },
-                {
-                  "kind": "Content",
-                  "text": "number"
-                },
-                {
-                  "kind": "Content",
-                  "text": ");"
-                }
-              ],
-              "isReadonly": false,
-              "isOptional": false,
-              "releaseTag": "Public",
-              "name": "x",
-              "propertyTypeTokenRange": {
-                "startIndex": 1,
-                "endIndex": 2
-              },
-              "isStatic": false,
-              "isProtected": false,
-              "isAbstract": false
-            },
-            {
-              "kind": "Property",
-              "canonicalReference": "nanogl-node!Node_2#y:member",
-              "docComment": "",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "set y(v: "
-                },
-                {
-                  "kind": "Content",
-                  "text": "number"
-                },
-                {
-                  "kind": "Content",
-                  "text": ");"
-                }
-              ],
-              "isReadonly": false,
-              "isOptional": false,
-              "releaseTag": "Public",
-              "name": "y",
-              "propertyTypeTokenRange": {
-                "startIndex": 1,
-                "endIndex": 2
-              },
-              "isStatic": false,
-              "isProtected": false,
-              "isAbstract": false
-            },
-            {
-              "kind": "Property",
-              "canonicalReference": "nanogl-node!Node_2#z:member",
-              "docComment": "",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "set z(v: "
-                },
-                {
-                  "kind": "Content",
-                  "text": "number"
-                },
-                {
-                  "kind": "Content",
-                  "text": ");"
-                }
-              ],
-              "isReadonly": false,
-              "isOptional": false,
-              "releaseTag": "Public",
-              "name": "z",
-              "propertyTypeTokenRange": {
-                "startIndex": 1,
-                "endIndex": 2
-              },
-              "isStatic": false,
-              "isProtected": false,
-              "isAbstract": false
-            }
-          ],
-          "implementsTokenRanges": []
-        }
-      ]
-    }
-  ]
+	"id": 0,
+	"name": "nanogl-node",
+	"kind": 1,
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 1,
+			"name": "index",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 2,
+					"name": "Node",
+					"kind": 128,
+					"kindString": "Class",
+					"flags": {
+						"isPublic": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "This is the base class for all 3D objects. It's like a simplified equivalent to Object3D for three.js."
+							}
+						]
+					},
+					"originalName": "default",
+					"children": [
+						{
+							"id": 3,
+							"name": "constructor",
+							"kind": 512,
+							"kindString": "Constructor",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 45,
+									"character": 2,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L45"
+								}
+							],
+							"signatures": [
+								{
+									"id": 4,
+									"name": "new Node",
+									"kind": 16384,
+									"kindString": "Constructor signature",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "default"
+									}
+								}
+							]
+						},
+						{
+							"id": 12,
+							"name": "_children",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 40,
+									"character": 2,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L40"
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 2,
+									"name": "default"
+								}
+							},
+							"defaultValue": "[]"
+						},
+						{
+							"id": 13,
+							"name": "_invalidM",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPrivate": true
+							},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 42,
+									"character": 10,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L42"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							},
+							"defaultValue": "true"
+						},
+						{
+							"id": 14,
+							"name": "_invalidW",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPrivate": true
+							},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 43,
+									"character": 10,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L43"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							},
+							"defaultValue": "true"
+						},
+						{
+							"id": 8,
+							"name": "_matrix",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 34,
+									"character": 11,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L34"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "mat4",
+								"qualifiedName": "mat4",
+								"package": "@types/gl-matrix"
+							},
+							"defaultValue": "..."
+						},
+						{
+							"id": 11,
+							"name": "_parent",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 39,
+									"character": 2,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L39"
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"id": 2,
+										"name": "default"
+									}
+								]
+							},
+							"defaultValue": "null"
+						},
+						{
+							"id": 9,
+							"name": "_wmatrix",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 35,
+									"character": 11,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L35"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "mat4",
+								"qualifiedName": "mat4",
+								"package": "@types/gl-matrix"
+							},
+							"defaultValue": "..."
+						},
+						{
+							"id": 10,
+							"name": "_wposition",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 37,
+									"character": 11,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L37"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "vec3",
+								"qualifiedName": "vec3",
+								"package": "@types/gl-matrix"
+							}
+						},
+						{
+							"id": 5,
+							"name": "position",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isReadonly": true
+							},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Node's local position."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@defaultValue",
+										"content": [
+											{
+												"kind": "text",
+												"text": "(0, 0, 0)"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 22,
+									"character": 11,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L22"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "vec3",
+								"qualifiedName": "vec3",
+								"package": "@types/gl-matrix"
+							},
+							"defaultValue": "..."
+						},
+						{
+							"id": 6,
+							"name": "rotation",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isReadonly": true
+							},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Node's local rotation."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@defaultValue",
+										"content": [
+											{
+												"kind": "text",
+												"text": "Identity quaternion"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 27,
+									"character": 11,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L27"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "quat",
+								"qualifiedName": "quat",
+								"package": "@types/gl-matrix"
+							},
+							"defaultValue": "..."
+						},
+						{
+							"id": 7,
+							"name": "scale",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isReadonly": true
+							},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Node's local scale."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@defaultValue",
+										"content": [
+											{
+												"kind": "text",
+												"text": "(1, 1, 1)"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 32,
+									"character": 11,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L32"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "vec3",
+								"qualifiedName": "vec3",
+								"package": "@types/gl-matrix"
+							},
+							"defaultValue": "..."
+						},
+						{
+							"id": 24,
+							"name": "x",
+							"kind": 262144,
+							"kindString": "Accessor",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 69,
+									"character": 6,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L69"
+								},
+								{
+									"fileName": "index.ts",
+									"line": 73,
+									"character": 6,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L73"
+								}
+							],
+							"getSignature": {
+								"id": 25,
+								"name": "x",
+								"kind": 524288,
+								"kindString": "Get signature",
+								"flags": {},
+								"type": {
+									"type": "intrinsic",
+									"name": "number"
+								}
+							},
+							"setSignature": {
+								"id": 26,
+								"name": "x",
+								"kind": 1048576,
+								"kindString": "Set signature",
+								"flags": {},
+								"parameters": [
+									{
+										"id": 27,
+										"name": "v",
+										"kind": 32768,
+										"kindString": "Parameter",
+										"flags": {},
+										"type": {
+											"type": "intrinsic",
+											"name": "number"
+										}
+									}
+								],
+								"type": {
+									"type": "intrinsic",
+									"name": "void"
+								}
+							}
+						},
+						{
+							"id": 28,
+							"name": "y",
+							"kind": 262144,
+							"kindString": "Accessor",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 70,
+									"character": 6,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L70"
+								},
+								{
+									"fileName": "index.ts",
+									"line": 74,
+									"character": 6,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L74"
+								}
+							],
+							"getSignature": {
+								"id": 29,
+								"name": "y",
+								"kind": 524288,
+								"kindString": "Get signature",
+								"flags": {},
+								"type": {
+									"type": "intrinsic",
+									"name": "number"
+								}
+							},
+							"setSignature": {
+								"id": 30,
+								"name": "y",
+								"kind": 1048576,
+								"kindString": "Set signature",
+								"flags": {},
+								"parameters": [
+									{
+										"id": 31,
+										"name": "v",
+										"kind": 32768,
+										"kindString": "Parameter",
+										"flags": {},
+										"type": {
+											"type": "intrinsic",
+											"name": "number"
+										}
+									}
+								],
+								"type": {
+									"type": "intrinsic",
+									"name": "void"
+								}
+							}
+						},
+						{
+							"id": 32,
+							"name": "z",
+							"kind": 262144,
+							"kindString": "Accessor",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 71,
+									"character": 6,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L71"
+								},
+								{
+									"fileName": "index.ts",
+									"line": 75,
+									"character": 6,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L75"
+								}
+							],
+							"getSignature": {
+								"id": 33,
+								"name": "z",
+								"kind": 524288,
+								"kindString": "Get signature",
+								"flags": {},
+								"type": {
+									"type": "intrinsic",
+									"name": "number"
+								}
+							},
+							"setSignature": {
+								"id": 34,
+								"name": "z",
+								"kind": 1048576,
+								"kindString": "Set signature",
+								"flags": {},
+								"parameters": [
+									{
+										"id": 35,
+										"name": "v",
+										"kind": 32768,
+										"kindString": "Parameter",
+										"flags": {},
+										"type": {
+											"type": "intrinsic",
+											"name": "number"
+										}
+									}
+								],
+								"type": {
+									"type": "intrinsic",
+									"name": "void"
+								}
+							}
+						},
+						{
+							"id": 58,
+							"name": "_computeWorldMatrix",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 193,
+									"character": 2,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L193"
+								}
+							],
+							"signatures": [
+								{
+									"id": 59,
+									"name": "_computeWorldMatrix",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"parameters": [
+										{
+											"id": 60,
+											"name": "skipParents",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "boolean"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							]
+						},
+						{
+							"id": 61,
+							"name": "_hasInvalidWorldMatrix",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 213,
+									"character": 2,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L213"
+								}
+							],
+							"signatures": [
+								{
+									"id": 62,
+									"name": "_hasInvalidWorldMatrix",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"parameters": [
+										{
+											"id": 63,
+											"name": "skipParents",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "boolean"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								}
+							]
+						},
+						{
+							"id": 45,
+							"name": "add",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 121,
+									"character": 2,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L121"
+								}
+							],
+							"signatures": [
+								{
+									"id": 46,
+									"name": "add",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Add child to this node. If child already has a parent, it will be removed as a node can only have one parent."
+											}
+										]
+									},
+									"parameters": [
+										{
+											"id": 47,
+											"name": "child",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Node to add as this node's child."
+													}
+												]
+											},
+											"type": {
+												"type": "reference",
+												"id": 2,
+												"name": "default"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							]
+						},
+						{
+							"id": 51,
+							"name": "invalidate",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 148,
+									"character": 2,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L148"
+								}
+							],
+							"signatures": [
+								{
+									"id": 52,
+									"name": "invalidate",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Invalidate this node's local matrix and world matrix."
+											}
+										]
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							]
+						},
+						{
+							"id": 39,
+							"name": "lookAt",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 94,
+									"character": 2,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L94"
+								}
+							],
+							"signatures": [
+								{
+									"id": 40,
+									"name": "lookAt",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Rotate node to look at target position."
+											}
+										]
+									},
+									"parameters": [
+										{
+											"id": 41,
+											"name": "tgt",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Target position to look at."
+													}
+												]
+											},
+											"type": {
+												"type": "reference",
+												"name": "vec3",
+												"qualifiedName": "vec3",
+												"package": "@types/gl-matrix"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							]
+						},
+						{
+							"id": 48,
+							"name": "remove",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 136,
+									"character": 2,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L136"
+								}
+							],
+							"signatures": [
+								{
+									"id": 49,
+									"name": "remove",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Remove child from this node's children."
+											}
+										]
+									},
+									"parameters": [
+										{
+											"id": 50,
+											"name": "child",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Node to remove from this node's children."
+													}
+												]
+											},
+											"type": {
+												"type": "reference",
+												"id": 2,
+												"name": "default"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							]
+						},
+						{
+							"id": 15,
+							"name": "rotateX",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 56,
+									"character": 2,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L56"
+								}
+							],
+							"signatures": [
+								{
+									"id": 16,
+									"name": "rotateX",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Rotate node around X-axis."
+											}
+										]
+									},
+									"parameters": [
+										{
+											"id": 17,
+											"name": "rad",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Rotation angle in radians."
+													}
+												]
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							]
+						},
+						{
+							"id": 18,
+							"name": "rotateY",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 61,
+									"character": 2,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L61"
+								}
+							],
+							"signatures": [
+								{
+									"id": 19,
+									"name": "rotateY",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Rotate node around Y-axis."
+											}
+										]
+									},
+									"parameters": [
+										{
+											"id": 20,
+											"name": "rad",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Rotation angle in radians."
+													}
+												]
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							]
+						},
+						{
+							"id": 21,
+							"name": "rotateZ",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 66,
+									"character": 2,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L66"
+								}
+							],
+							"signatures": [
+								{
+									"id": 22,
+									"name": "rotateZ",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Rotate node around Z-axis."
+											}
+										]
+									},
+									"parameters": [
+										{
+											"id": 23,
+											"name": "rad",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Rotation angle in radians."
+													}
+												]
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							]
+						},
+						{
+							"id": 42,
+							"name": "setMatrix",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 109,
+									"character": 2,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L109"
+								}
+							],
+							"signatures": [
+								{
+									"id": 43,
+									"name": "setMatrix",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Set node transformation matrix."
+											}
+										]
+									},
+									"parameters": [
+										{
+											"id": 44,
+											"name": "m4",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Matrix to assign to node."
+													}
+												]
+											},
+											"type": {
+												"type": "reference",
+												"name": "mat4",
+												"qualifiedName": "mat4",
+												"package": "@types/gl-matrix"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							]
+						},
+						{
+							"id": 36,
+							"name": "setScale",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 82,
+									"character": 2,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L82"
+								}
+							],
+							"signatures": [
+								{
+									"id": 37,
+									"name": "setScale",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Set node scale for all axis."
+											}
+										]
+									},
+									"parameters": [
+										{
+											"id": 38,
+											"name": "s",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Scale factor."
+													}
+												]
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							]
+						},
+						{
+							"id": 53,
+							"name": "updateMatrix",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 157,
+									"character": 2,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L157"
+								}
+							],
+							"signatures": [
+								{
+									"id": 54,
+									"name": "updateMatrix",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Update node's local matrix, if it has been declared invalid."
+											}
+										]
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							]
+						},
+						{
+							"id": 55,
+							"name": "updateWorldMatrix",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "index.ts",
+									"line": 176,
+									"character": 2,
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L176"
+								}
+							],
+							"signatures": [
+								{
+									"id": 56,
+									"name": "updateWorldMatrix",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Update node's world matrix if it has been declared invalid, and recursively update all children's world matrices."
+											}
+										]
+									},
+									"parameters": [
+										{
+											"id": 57,
+											"name": "skipParents",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "If true, parent's world matrix will not be updated."
+													}
+												]
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "boolean"
+											},
+											"defaultValue": "false"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"children": [
+								3
+							]
+						},
+						{
+							"title": "Properties",
+							"children": [
+								12,
+								13,
+								14,
+								8,
+								11,
+								9,
+								10,
+								5,
+								6,
+								7
+							]
+						},
+						{
+							"title": "Accessors",
+							"children": [
+								24,
+								28,
+								32
+							]
+						},
+						{
+							"title": "Methods",
+							"children": [
+								58,
+								61,
+								45,
+								51,
+								39,
+								48,
+								15,
+								18,
+								21,
+								42,
+								36,
+								53,
+								55
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 16,
+							"character": 21,
+							"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L16"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"children": [
+						2
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 2,
+					"character": 0,
+					"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/index.ts#L2"
+				}
+			]
+		},
+		{
+			"id": 64,
+			"name": "math",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 65,
+					"name": "decomposeMat4",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "math.ts",
+							"line": 5,
+							"character": 16,
+							"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/math.ts#L5"
+						}
+					],
+					"signatures": [
+						{
+							"id": 66,
+							"name": "decomposeMat4",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 67,
+									"name": "m4",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "mat4",
+										"qualifiedName": "mat4",
+										"package": "@types/gl-matrix"
+									}
+								},
+								{
+									"id": 68,
+									"name": "p",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "vec3",
+										"qualifiedName": "vec3",
+										"package": "@types/gl-matrix"
+									}
+								},
+								{
+									"id": 69,
+									"name": "q",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "quat",
+										"qualifiedName": "quat",
+										"package": "@types/gl-matrix"
+									}
+								},
+								{
+									"id": 70,
+									"name": "s",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "vec3",
+										"qualifiedName": "vec3",
+										"package": "@types/gl-matrix"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						65
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "math.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/evanmartiin/nanogl-node/blob/f51c981/src/math.ts#L1"
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"children": [
+				1,
+				64
+			]
+		}
+	]
 }
