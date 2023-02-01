@@ -10,7 +10,7 @@ const VZ = new Float32Array( MAT3.buffer, 6*4, 3 ) as vec3
 const VUP  = vec3.fromValues( 0, 1, 0 );
 
 /**
- * This is the base class for all 3D objects. It's like a simplified equivalent to Object3D for three.js.
+ * This is the base class for all 3D objects. It's like a simplified equivalent to Object3D for Threejs.
  * @public
  */
 export default class Node {

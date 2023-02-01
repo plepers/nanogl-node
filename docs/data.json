@@ -24,7 +24,7 @@
 						"summary": [
 							{
 								"kind": "text",
-								"text": "This is the base class for all 3D objects. It's like a simplified equivalent to Object3D for three.js."
+								"text": "This is the base class for all 3D objects. It's like a simplified equivalent to Object3D for Threejs."
 							}
 						]
 					},
@@ -41,7 +41,7 @@
 									"fileName": "index.ts",
 									"line": 45,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L45"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L45"
 								}
 							],
 							"signatures": [
@@ -70,7 +70,7 @@
 									"fileName": "index.ts",
 									"line": 40,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L40"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L40"
 								}
 							],
 							"type": {
@@ -96,7 +96,7 @@
 									"fileName": "index.ts",
 									"line": 42,
 									"character": 10,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L42"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L42"
 								}
 							],
 							"type": {
@@ -118,7 +118,7 @@
 									"fileName": "index.ts",
 									"line": 43,
 									"character": 10,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L43"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L43"
 								}
 							],
 							"type": {
@@ -140,7 +140,7 @@
 									"fileName": "index.ts",
 									"line": 34,
 									"character": 11,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L34"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L34"
 								}
 							],
 							"type": {
@@ -162,7 +162,7 @@
 									"fileName": "index.ts",
 									"line": 39,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L39"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L39"
 								}
 							],
 							"type": {
@@ -194,7 +194,7 @@
 									"fileName": "index.ts",
 									"line": 35,
 									"character": 11,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L35"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L35"
 								}
 							],
 							"type": {
@@ -218,7 +218,7 @@
 									"fileName": "index.ts",
 									"line": 37,
 									"character": 11,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L37"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L37"
 								}
 							],
 							"type": {
@@ -260,7 +260,7 @@
 									"fileName": "index.ts",
 									"line": 22,
 									"character": 11,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L22"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L22"
 								}
 							],
 							"type": {
@@ -303,7 +303,7 @@
 									"fileName": "index.ts",
 									"line": 27,
 									"character": 11,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L27"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L27"
 								}
 							],
 							"type": {
@@ -346,7 +346,7 @@
 									"fileName": "index.ts",
 									"line": 32,
 									"character": 11,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L32"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L32"
 								}
 							],
 							"type": {
@@ -368,13 +368,13 @@
 									"fileName": "index.ts",
 									"line": 69,
 									"character": 6,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L69"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L69"
 								},
 								{
 									"fileName": "index.ts",
 									"line": 73,
 									"character": 6,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L73"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L73"
 								}
 							],
 							"getSignature": {
@@ -424,13 +424,13 @@
 									"fileName": "index.ts",
 									"line": 70,
 									"character": 6,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L70"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L70"
 								},
 								{
 									"fileName": "index.ts",
 									"line": 74,
 									"character": 6,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L74"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L74"
 								}
 							],
 							"getSignature": {
@@ -480,13 +480,13 @@
 									"fileName": "index.ts",
 									"line": 71,
 									"character": 6,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L71"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L71"
 								},
 								{
 									"fileName": "index.ts",
 									"line": 75,
 									"character": 6,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L75"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L75"
 								}
 							],
 							"getSignature": {
@@ -536,7 +536,7 @@
 									"fileName": "index.ts",
 									"line": 193,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L193"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L193"
 								}
 							],
 							"signatures": [
@@ -577,7 +577,7 @@
 									"fileName": "index.ts",
 									"line": 213,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L213"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L213"
 								}
 							],
 							"signatures": [
@@ -618,7 +618,7 @@
 									"fileName": "index.ts",
 									"line": 121,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L121"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L121"
 								}
 							],
 							"signatures": [
@@ -676,7 +676,7 @@
 									"fileName": "index.ts",
 									"line": 148,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L148"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L148"
 								}
 							],
 							"signatures": [
@@ -712,7 +712,7 @@
 									"fileName": "index.ts",
 									"line": 94,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L94"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L94"
 								}
 							],
 							"signatures": [
@@ -771,7 +771,7 @@
 									"fileName": "index.ts",
 									"line": 136,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L136"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L136"
 								}
 							],
 							"signatures": [
@@ -829,7 +829,7 @@
 									"fileName": "index.ts",
 									"line": 56,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L56"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L56"
 								}
 							],
 							"signatures": [
@@ -886,7 +886,7 @@
 									"fileName": "index.ts",
 									"line": 61,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L61"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L61"
 								}
 							],
 							"signatures": [
@@ -943,7 +943,7 @@
 									"fileName": "index.ts",
 									"line": 66,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L66"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L66"
 								}
 							],
 							"signatures": [
@@ -1000,7 +1000,7 @@
 									"fileName": "index.ts",
 									"line": 109,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L109"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L109"
 								}
 							],
 							"signatures": [
@@ -1059,7 +1059,7 @@
 									"fileName": "index.ts",
 									"line": 82,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L82"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L82"
 								}
 							],
 							"signatures": [
@@ -1116,7 +1116,7 @@
 									"fileName": "index.ts",
 									"line": 157,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L157"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L157"
 								}
 							],
 							"signatures": [
@@ -1152,7 +1152,7 @@
 									"fileName": "index.ts",
 									"line": 176,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L176"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L176"
 								}
 							],
 							"signatures": [
@@ -1254,7 +1254,7 @@
 							"fileName": "index.ts",
 							"line": 16,
 							"character": 21,
-							"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L16"
+							"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L16"
 						}
 					]
 				}
@@ -1272,7 +1272,7 @@
 					"fileName": "index.ts",
 					"line": 2,
 					"character": 0,
-					"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/index.ts#L2"
+					"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/index.ts#L2"
 				}
 			]
 		},
@@ -1294,7 +1294,7 @@
 							"fileName": "math.ts",
 							"line": 5,
 							"character": 16,
-							"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/math.ts#L5"
+							"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/math.ts#L5"
 						}
 					],
 					"signatures": [
@@ -1379,7 +1379,7 @@
 					"fileName": "math.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/evanmartiin/nanogl-node/blob/45883d9/src/math.ts#L1"
+					"url": "https://github.com/evanmartiin/nanogl-node/blob/b8015f0/src/math.ts#L1"
 				}
 			]
 		}
