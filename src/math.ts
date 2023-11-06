@@ -2,6 +2,13 @@ import { mat3, mat4, vec3, quat } from "gl-matrix";
 
 const M3 : mat3   = mat3.create();
 
+/**
+ * Retrieve position, rotation and scale from a given 4*4 matrix.
+ * @param m4 - 4*4 matrix to decompose.
+ * @param p - Position vector.
+ * @param q - Rotation quaternion.
+ * @param s - Scale vector.
+ */
 export function decomposeMat4( m4 : mat4, p:vec3, q:quat, s:vec3 ){
 
     p[0] = m4[12];
