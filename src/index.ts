@@ -49,9 +49,9 @@ export default class Node {
    */
   readonly _wposition: vec3;
 
-  /** The parent of this node */
+  /** The parent for this node */
   _parent  : Node|null = null;
-  /** The list of children of this node */
+  /** The list of children for this node */
   _children: Node[] = [];
 
   /** Whether the local matrix is invalid or not */
