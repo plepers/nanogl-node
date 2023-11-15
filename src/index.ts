@@ -10,13 +10,10 @@ const VZ = new Float32Array( MAT3.buffer, 6*4, 3 ) as vec3
 const VUP  = vec3.fromValues( 0, 1, 0 );
 
 /**
- * This class represents a node in a scene graph.
+ * This class represents a node in a scene graph, and supports nesting.
  *
  * It provides helpers for handling objects transform in 3D space.
- *
  * You can use it to set position, rotation and scale of an object, and compute the corresponding local & world matrix.
- *
- * The nodes also support nesting.
  */
 export default class Node {
   /**
