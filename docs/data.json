@@ -17,14 +17,12 @@
 					"name": "Node",
 					"kind": 128,
 					"kindString": "Class",
-					"flags": {
-						"isPublic": true
-					},
+					"flags": {},
 					"comment": {
 						"summary": [
 							{
 								"kind": "text",
-								"text": "This is the base class for all 3D objects. It's like a simplified equivalent to Object3D for threejs."
+								"text": "This class represents a node in a scene graph.\n\nIt provides helpers for handling objects transform in 3D space.\n\nYou can use it to set position, rotation and scale of an object, and compute the corresponding local & world matrix.\n\nThe nodes also support nesting."
 							}
 						]
 					},
@@ -39,9 +37,9 @@
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 45,
+									"line": 65,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L45"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L65"
 								}
 							],
 							"signatures": [
@@ -65,12 +63,20 @@
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "The list of children of this node"
+									}
+								]
+							},
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 40,
+									"line": 58,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L40"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L58"
 								}
 							],
 							"type": {
@@ -91,12 +97,20 @@
 							"flags": {
 								"isPrivate": true
 							},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Whether the local matrix is invalid or not"
+									}
+								]
+							},
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 42,
+									"line": 61,
 									"character": 10,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L42"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L61"
 								}
 							],
 							"type": {
@@ -113,12 +127,20 @@
 							"flags": {
 								"isPrivate": true
 							},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Whether the world matrix is invalid or not"
+									}
+								]
+							},
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 43,
+									"line": 63,
 									"character": 10,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L43"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L63"
 								}
 							],
 							"type": {
@@ -135,12 +157,31 @@
 							"flags": {
 								"isReadonly": true
 							},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "The local transform matrix"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@defaultValue",
+										"content": [
+											{
+												"kind": "text",
+												"text": "Identity 4*4 matrix"
+											}
+										]
+									}
+								]
+							},
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 34,
+									"line": 42,
 									"character": 11,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L34"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L42"
 								}
 							],
 							"type": {
@@ -157,12 +198,20 @@
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "The parent of this node"
+									}
+								]
+							},
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 39,
+									"line": 56,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L39"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L56"
 								}
 							],
 							"type": {
@@ -189,12 +238,31 @@
 							"flags": {
 								"isReadonly": true
 							},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "The world transform matrix"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@defaultValue",
+										"content": [
+											{
+												"kind": "text",
+												"text": "Identity 4*4 matrix"
+											}
+										]
+									}
+								]
+							},
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 35,
+									"line": 47,
 									"character": 11,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L35"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L47"
 								}
 							],
 							"type": {
@@ -213,12 +281,31 @@
 							"flags": {
 								"isReadonly": true
 							},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "The world position"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@defaultValue",
+										"content": [
+											{
+												"kind": "text",
+												"text": "vec3(0, 0, 0)"
+											}
+										]
+									}
+								]
+							},
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 37,
+									"line": 53,
 									"character": 11,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L37"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L53"
 								}
 							],
 							"type": {
@@ -240,7 +327,7 @@
 								"summary": [
 									{
 										"kind": "text",
-										"text": "Node's local position."
+										"text": "The local position"
 									}
 								],
 								"blockTags": [
@@ -249,7 +336,7 @@
 										"content": [
 											{
 												"kind": "text",
-												"text": "(0, 0, 0)"
+												"text": "vec3(0, 0, 0)"
 											}
 										]
 									}
@@ -258,9 +345,9 @@
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 22,
+									"line": 26,
 									"character": 11,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L22"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L26"
 								}
 							],
 							"type": {
@@ -283,7 +370,7 @@
 								"summary": [
 									{
 										"kind": "text",
-										"text": "Node's local rotation."
+										"text": "The local rotation"
 									}
 								],
 								"blockTags": [
@@ -301,9 +388,9 @@
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 27,
+									"line": 31,
 									"character": 11,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L27"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L31"
 								}
 							],
 							"type": {
@@ -326,7 +413,7 @@
 								"summary": [
 									{
 										"kind": "text",
-										"text": "Node's local scale."
+										"text": "The local scale"
 									}
 								],
 								"blockTags": [
@@ -335,7 +422,7 @@
 										"content": [
 											{
 												"kind": "text",
-												"text": "(1, 1, 1)"
+												"text": "vec3(1, 1, 1)"
 											}
 										]
 									}
@@ -344,9 +431,9 @@
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 32,
+									"line": 36,
 									"character": 11,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L32"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L36"
 								}
 							],
 							"type": {
@@ -366,15 +453,15 @@
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 69,
+									"line": 92,
 									"character": 6,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L69"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L92"
 								},
 								{
 									"fileName": "index.ts",
-									"line": 73,
+									"line": 107,
 									"character": 6,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L73"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L107"
 								}
 							],
 							"getSignature": {
@@ -383,6 +470,14 @@
 								"kind": 524288,
 								"kindString": "Get signature",
 								"flags": {},
+								"comment": {
+									"summary": [
+										{
+											"kind": "text",
+											"text": "Get node position on the X-axis."
+										}
+									]
+								},
 								"type": {
 									"type": "intrinsic",
 									"name": "number"
@@ -394,6 +489,14 @@
 								"kind": 1048576,
 								"kindString": "Set signature",
 								"flags": {},
+								"comment": {
+									"summary": [
+										{
+											"kind": "text",
+											"text": "Set node position on the X-axis."
+										}
+									]
+								},
 								"parameters": [
 									{
 										"id": 27,
@@ -401,6 +504,14 @@
 										"kind": 32768,
 										"kindString": "Parameter",
 										"flags": {},
+										"comment": {
+											"summary": [
+												{
+													"kind": "text",
+													"text": "The value to set"
+												}
+											]
+										},
 										"type": {
 											"type": "intrinsic",
 											"name": "number"
@@ -422,15 +533,15 @@
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 70,
+									"line": 97,
 									"character": 6,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L70"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L97"
 								},
 								{
 									"fileName": "index.ts",
-									"line": 74,
+									"line": 111,
 									"character": 6,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L74"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L111"
 								}
 							],
 							"getSignature": {
@@ -439,6 +550,14 @@
 								"kind": 524288,
 								"kindString": "Get signature",
 								"flags": {},
+								"comment": {
+									"summary": [
+										{
+											"kind": "text",
+											"text": "Get node position on the Y-axis."
+										}
+									]
+								},
 								"type": {
 									"type": "intrinsic",
 									"name": "number"
@@ -450,6 +569,14 @@
 								"kind": 1048576,
 								"kindString": "Set signature",
 								"flags": {},
+								"comment": {
+									"summary": [
+										{
+											"kind": "text",
+											"text": "Set node position on the Y-axis."
+										}
+									]
+								},
 								"parameters": [
 									{
 										"id": 31,
@@ -457,6 +584,14 @@
 										"kind": 32768,
 										"kindString": "Parameter",
 										"flags": {},
+										"comment": {
+											"summary": [
+												{
+													"kind": "text",
+													"text": "The value to set"
+												}
+											]
+										},
 										"type": {
 											"type": "intrinsic",
 											"name": "number"
@@ -478,15 +613,15 @@
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 71,
+									"line": 102,
 									"character": 6,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L71"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L102"
 								},
 								{
 									"fileName": "index.ts",
-									"line": 75,
+									"line": 115,
 									"character": 6,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L75"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L115"
 								}
 							],
 							"getSignature": {
@@ -495,6 +630,14 @@
 								"kind": 524288,
 								"kindString": "Get signature",
 								"flags": {},
+								"comment": {
+									"summary": [
+										{
+											"kind": "text",
+											"text": "Get node position on the Z-axis."
+										}
+									]
+								},
 								"type": {
 									"type": "intrinsic",
 									"name": "number"
@@ -506,6 +649,14 @@
 								"kind": 1048576,
 								"kindString": "Set signature",
 								"flags": {},
+								"comment": {
+									"summary": [
+										{
+											"kind": "text",
+											"text": "Set node position on the Z-axis."
+										}
+									]
+								},
 								"parameters": [
 									{
 										"id": 35,
@@ -513,6 +664,14 @@
 										"kind": 32768,
 										"kindString": "Parameter",
 										"flags": {},
+										"comment": {
+											"summary": [
+												{
+													"kind": "text",
+													"text": "The value to set"
+												}
+											]
+										},
 										"type": {
 											"type": "intrinsic",
 											"name": "number"
@@ -534,9 +693,9 @@
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 193,
+									"line": 238,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L193"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L238"
 								}
 							],
 							"signatures": [
@@ -546,6 +705,14 @@
 									"kind": 4096,
 									"kindString": "Call signature",
 									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Compute node world matrix. It also computes node's parent's world matrix (if it has been declared invalid) before computing node world matrix."
+											}
+										]
+									},
 									"parameters": [
 										{
 											"id": 60,
@@ -553,6 +720,14 @@
 											"kind": 32768,
 											"kindString": "Parameter",
 											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "If true, the node's parent's world matrix will not be computed"
+													}
+												]
+											},
 											"type": {
 												"type": "intrinsic",
 												"name": "boolean"
@@ -575,9 +750,9 @@
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 213,
+									"line": 261,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L213"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L261"
 								}
 							],
 							"signatures": [
@@ -587,6 +762,14 @@
 									"kind": 4096,
 									"kindString": "Call signature",
 									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Know whether the node world matrix is invalid or not. It also checks node's parent's world matrix."
+											}
+										]
+									},
 									"parameters": [
 										{
 											"id": 63,
@@ -594,6 +777,14 @@
 											"kind": 32768,
 											"kindString": "Parameter",
 											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "If true, the node's parent's world matrix will not be checked"
+													}
+												]
+											},
 											"type": {
 												"type": "intrinsic",
 												"name": "boolean"
@@ -616,9 +807,9 @@
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 121,
+									"line": 162,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L121"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L162"
 								}
 							],
 							"signatures": [
@@ -632,7 +823,7 @@
 										"summary": [
 											{
 												"kind": "text",
-												"text": "Add child to this node. If child already has a parent, it will be removed as a node can only have one parent."
+												"text": "Add a child to the node.\nIf the child already has a parent, it will be removed : a node can only have one parent."
 											}
 										]
 									},
@@ -647,7 +838,7 @@
 												"summary": [
 													{
 														"kind": "text",
-														"text": "Node to add as this node's child."
+														"text": "The node to add as this node's child"
 													}
 												]
 											},
@@ -674,9 +865,9 @@
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 148,
+									"line": 189,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L148"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L189"
 								}
 							],
 							"signatures": [
@@ -690,7 +881,7 @@
 										"summary": [
 											{
 												"kind": "text",
-												"text": "Invalidate this node's local matrix and world matrix."
+												"text": "Invalidate node local matrix and world matrix."
 											}
 										]
 									},
@@ -710,9 +901,9 @@
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 94,
+									"line": 134,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L94"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L134"
 								}
 							],
 							"signatures": [
@@ -726,7 +917,7 @@
 										"summary": [
 											{
 												"kind": "text",
-												"text": "Rotate node to look at target position."
+												"text": "Rotate the node to look at target position."
 											}
 										]
 									},
@@ -741,7 +932,7 @@
 												"summary": [
 													{
 														"kind": "text",
-														"text": "Target position to look at."
+														"text": "The target position to look at"
 													}
 												]
 											},
@@ -769,9 +960,9 @@
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 136,
+									"line": 177,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L136"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L177"
 								}
 							],
 							"signatures": [
@@ -785,7 +976,7 @@
 										"summary": [
 											{
 												"kind": "text",
-												"text": "Remove child from this node's children."
+												"text": "Remove a child from the node's children."
 											}
 										]
 									},
@@ -800,7 +991,7 @@
 												"summary": [
 													{
 														"kind": "text",
-														"text": "Node to remove from this node's children."
+														"text": "The node to remove from this node's children"
 													}
 												]
 											},
@@ -827,9 +1018,9 @@
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 56,
+									"line": 76,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L56"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L76"
 								}
 							],
 							"signatures": [
@@ -858,7 +1049,7 @@
 												"summary": [
 													{
 														"kind": "text",
-														"text": "Rotation angle in radians."
+														"text": "The rotation angle (in radians)"
 													}
 												]
 											},
@@ -884,9 +1075,9 @@
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 61,
+									"line": 81,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L61"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L81"
 								}
 							],
 							"signatures": [
@@ -915,7 +1106,7 @@
 												"summary": [
 													{
 														"kind": "text",
-														"text": "Rotation angle in radians."
+														"text": "The rotation angle (in radians)"
 													}
 												]
 											},
@@ -941,9 +1132,9 @@
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 66,
+									"line": 86,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L66"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L86"
 								}
 							],
 							"signatures": [
@@ -972,7 +1163,7 @@
 												"summary": [
 													{
 														"kind": "text",
-														"text": "Rotation angle in radians."
+														"text": "The rotation angle (in radians)"
 													}
 												]
 											},
@@ -998,9 +1189,9 @@
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 109,
+									"line": 149,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L109"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L149"
 								}
 							],
 							"signatures": [
@@ -1014,7 +1205,7 @@
 										"summary": [
 											{
 												"kind": "text",
-												"text": "Set node transformation matrix."
+												"text": "Set node local transformation matrix."
 											}
 										]
 									},
@@ -1029,7 +1220,7 @@
 												"summary": [
 													{
 														"kind": "text",
-														"text": "Matrix to assign to node."
+														"text": "The matrix to set"
 													}
 												]
 											},
@@ -1057,9 +1248,9 @@
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 82,
+									"line": 122,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L82"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L122"
 								}
 							],
 							"signatures": [
@@ -1073,7 +1264,7 @@
 										"summary": [
 											{
 												"kind": "text",
-												"text": "Set node scale for all axis."
+												"text": "Set node scale for all axes."
 											}
 										]
 									},
@@ -1088,7 +1279,7 @@
 												"summary": [
 													{
 														"kind": "text",
-														"text": "Scale factor."
+														"text": "The scale factor"
 													}
 												]
 											},
@@ -1114,9 +1305,9 @@
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 157,
+									"line": 198,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L157"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L198"
 								}
 							],
 							"signatures": [
@@ -1130,7 +1321,7 @@
 										"summary": [
 											{
 												"kind": "text",
-												"text": "Update node's local matrix, if it has been declared invalid."
+												"text": "Update node local matrix, if it has been declared invalid."
 											}
 										]
 									},
@@ -1150,9 +1341,9 @@
 							"sources": [
 								{
 									"fileName": "index.ts",
-									"line": 176,
+									"line": 217,
 									"character": 2,
-									"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L176"
+									"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L217"
 								}
 							],
 							"signatures": [
@@ -1166,7 +1357,7 @@
 										"summary": [
 											{
 												"kind": "text",
-												"text": "Update node's world matrix if it has been declared invalid, and recursively update all children's world matrices."
+												"text": "Update node world matrix, if it has been declared invalid, and recursively update all children's world matrices."
 											}
 										]
 									},
@@ -1181,7 +1372,7 @@
 												"summary": [
 													{
 														"kind": "text",
-														"text": "If true, parent's world matrix will not be updated."
+														"text": "If true, the node's parent's world matrix will not be checked or updated before updating node world matrix"
 													}
 												]
 											},
@@ -1252,9 +1443,9 @@
 					"sources": [
 						{
 							"fileName": "index.ts",
-							"line": 16,
+							"line": 21,
 							"character": 21,
-							"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L16"
+							"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L21"
 						}
 					]
 				}
@@ -1272,7 +1463,7 @@
 					"fileName": "index.ts",
 					"line": 2,
 					"character": 0,
-					"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/index.ts#L2"
+					"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/index.ts#L2"
 				}
 			]
 		},
@@ -1294,7 +1485,7 @@
 							"fileName": "math.ts",
 							"line": 12,
 							"character": 16,
-							"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/math.ts#L12"
+							"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/math.ts#L12"
 						}
 					],
 					"signatures": [
@@ -1308,7 +1499,7 @@
 								"summary": [
 									{
 										"kind": "text",
-										"text": "Retrieve position, rotation and scale from a given 4*4 matrix."
+										"text": "Retrieve position, rotation and scale from a given 4*4 matrix and store the result in the given variables."
 									}
 								]
 							},
@@ -1323,7 +1514,7 @@
 										"summary": [
 											{
 												"kind": "text",
-												"text": "4*4 matrix to decompose."
+												"text": "The 4*4 matrix to decompose"
 											}
 										]
 									},
@@ -1344,7 +1535,7 @@
 										"summary": [
 											{
 												"kind": "text",
-												"text": "Position vector."
+												"text": "The position vector in which to store the result"
 											}
 										]
 									},
@@ -1365,7 +1556,7 @@
 										"summary": [
 											{
 												"kind": "text",
-												"text": "Rotation quaternion."
+												"text": "The rotation quaternion in which to store the result"
 											}
 										]
 									},
@@ -1386,7 +1577,7 @@
 										"summary": [
 											{
 												"kind": "text",
-												"text": "Scale vector."
+												"text": "The scale vector in which to store the result"
 											}
 										]
 									},
@@ -1419,7 +1610,7 @@
 					"fileName": "math.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/evanmartiin/nanogl-node/blob/6ad0ba4/src/math.ts#L1"
+					"url": "https://github.com/evanmartiin/nanogl-node/blob/f7d07cc/src/math.ts#L1"
 				}
 			]
 		}
