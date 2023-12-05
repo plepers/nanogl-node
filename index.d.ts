@@ -1,5 +1,5 @@
 import { vec3, quat, mat4 } from 'gl-matrix';
-declare class Node {
+export default class Node {
     readonly position: vec3;
     readonly rotation: quat;
     readonly scale: vec3;
@@ -31,4 +31,3 @@ declare class Node {
     _computeWorldMatrix(skipParents: boolean): void;
     _hasInvalidWorldMatrix(skipParents: boolean): boolean;
 }
-export default Node;

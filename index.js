@@ -5,7 +5,7 @@ const VX = new Float32Array(MAT3.buffer, 0 * 4, 3);
 const VY = new Float32Array(MAT3.buffer, 3 * 4, 3);
 const VZ = new Float32Array(MAT3.buffer, 6 * 4, 3);
 const VUP = vec3.fromValues(0, 1, 0);
-class Node {
+export default class Node {
     constructor() {
         this.position = vec3.create();
         this.rotation = quat.create();
@@ -105,4 +105,3 @@ class Node {
     }
 }
 ;
-export default Node;
