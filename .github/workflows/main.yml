@@ -28,6 +28,8 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           message: 'update: docs (runned by GHAction)'
+          author_email: 'pierre.lepers@gmail.com'
+          author_name: 'plepers'
           branch: 'develop'
 
       - uses: actions/github-script@v6
